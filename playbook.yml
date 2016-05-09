@@ -1,0 +1,12 @@
+- hosts: localhost
+  connection: local
+  roles:
+    - zsh
+    # - git
+    # - rubygems
+    # - ctags
+    # - vim
+    # - neovim
+    # - tmux
+    # - iterm2
+    # - mysql
