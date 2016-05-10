@@ -43,3 +43,4 @@ server/
 *.db
 python-*-docs-html
 /.cask/
+playbook.retry
