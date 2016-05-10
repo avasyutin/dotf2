@@ -2,7 +2,8 @@
   connection: local
   roles:
     - zsh
-    # - git
+    - emacs
+    - git
     # - rubygems
     # - ctags
     # - vim
