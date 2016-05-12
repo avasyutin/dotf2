@@ -26,8 +26,26 @@
 
 (ensure-package-installed 'evil
 			  'helm
-			  'projectile)
+			  'projectile
+			  'ample-theme)
 
 (evil-mode 1)
 
-  
+;; display line numbers
+(global-linum-mode 1)
+
+;; Changes all yes/no questions to y/n type
+(fset 'yes-or-no-p 'y-or-n-p)
+
+;; Stop littering everywhere with save files, put them somewhere
+(setq backup-directory-alist '(("." . "~/.emacs-backups")))
+
+;; Tabs are evil
+(setq-default indent-tabs-mode nil)
+
+;; Hide menu bar
+(menu-bar-mode -1)
+
+;; Theme and colors
+(load-theme 'ample t t)
+(enable-theme 'ample)
