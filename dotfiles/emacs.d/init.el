@@ -12,6 +12,7 @@
 
 (require 'package)
 
+(add-to-list 'custom-theme-load-path (expand-file-name "themes" user-emacs-directory))
 (add-to-list 'package-archives
 	     '("melpa" . "https://melpa.org/packages/"))
 (when (< emacs-major-version 24)
@@ -27,15 +28,9 @@
 (ensure-package-installed 'evil
 			  'helm
 			  'projectile
-			  'ample-theme)
+                          'monokai-theme)
 
 (evil-mode 1)
-
-;; display line numbers
-(global-linum-mode 1)
-
-;; Changes all yes/no questions to y/n type
-(fset 'yes-or-no-p 'y-or-n-p)
 
 ;; Stop littering everywhere with save files, put them somewhere
 (setq backup-directory-alist '(("." . "~/.emacs-backups")))
@@ -46,6 +41,17 @@
 ;; Hide menu bar
 (menu-bar-mode -1)
 
-;; Theme and colors
-(load-theme 'ample t t)
-(enable-theme 'ample)
+;; Theme UI and colors
+(setq custom-safe-themes t)
+(load-theme 'monokai)
+
+;; display line numbers
+(global-linum-mode 1)
+
+;; Changes all yes/no questions to y/n type
+(fset 'yes-or-no-p 'y-or-n-p)
+
+;; (setq whitespace-style '(face empty tabs lines-tail trailing))
+(global-whitespace-mode t)
+
+
