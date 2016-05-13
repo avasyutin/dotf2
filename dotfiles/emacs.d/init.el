@@ -54,4 +54,9 @@
 ;; (setq whitespace-style '(face empty tabs lines-tail trailing))
 (global-whitespace-mode t)
 
+(custom-set-faces
+ '(whitespace-space
+   ((((class color) (background dark)) (:foreground "#363636"))
+    (((class color) (background light)) (:background "yellow" :foreground "black"))
+        (t (:inverse-video t)))))
 
