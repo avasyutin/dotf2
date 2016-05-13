@@ -51,12 +51,32 @@
 ;; Changes all yes/no questions to y/n type
 (fset 'yes-or-no-p 'y-or-n-p)
 
-;; (setq whitespace-style '(face empty tabs lines-tail trailing))
 (global-whitespace-mode t)
 
-(custom-set-faces
- '(whitespace-space
-   ((((class color) (background dark)) (:foreground "#363636"))
-    (((class color) (background light)) (:background "yellow" :foreground "black"))
-        (t (:inverse-video t)))))
+;; make whitespace-mode use just basic coloring
+;;(setq whitespace-style '(space tabs newline space-mark tab-mark newline-mark lines-tail trailing))
 
+;; make whitespace-mode use just basic coloring
+;; (setq whitespace-style '(spaces tabs newline space-mark tab-mark newline-mark))
+
+(setq whitespace-display-mappings
+      ;; all numbers are Unicode codepoint in decimal. try (insert-char 182 ) to see it
+      '(
+        (space-mark 32 [183] [46]) ; 32 SPACE, 183 MIDDLE DOT 「·」, 46 FULL STOP 「.」
+        (newline-mark 10 [182 10]) ; 10 LINE FEED
+        (tab-mark 9 [9655 9] [92 9]) ; 9 TAB, 9655 WHITE RIGHT-POINTING TRIANGLE 「▷」
+                ))
+
+;;(custom-set-faces
+;; '(whitespace-space
+;;   ((((class color) (background dark)) (:foreground "#363636"))
+;;    (((class color) (background light)) (:background "yellow" :foreground "black"))
+;;        (t (:inverse-video t)))))
+
+(set-face-attribute 'whitespace-space nil :background nil :foreground "#363636")
+(set-face-attribute 'whitespace-newline nil :background nil :foreground "#363636")
+
+(set-face-attribute
+ 'whitespace-space-after-tab nil
+ :background "#363636"
+ :foreground (face-attribute 'default :background))
