@@ -27,7 +27,12 @@
 
 (ensure-package-installed 'evil
 			  'helm
-			  'projectile)
+			  'projectile
+                          'monokai-theme
+                          'powerline
+                          'powerline-evil
+                          'moe-theme
+                          'smart-mode-line)
 
 (evil-mode 1)
 
@@ -38,11 +43,28 @@
 (setq-default indent-tabs-mode nil)
 
 ;; Hide menu bar
+
 (menu-bar-mode -1)
 
 ;; Theme UI and colors
 (setq custom-safe-themes t)
 ;;(load-theme 'monokai)
+(require 'moe-theme)
+(moe-theme-set-color 'cyan)
+(moe-dark)
+
+(require 'cl)
+; (require 'smart-mode-line)
+(require 'powerline)
+(powerline-evil-center-color-theme)
+;;(powerline-default-theme)
+;;(powerline-moe-theme)
+; (setq sml/theme 'powerline)
+; (setq sml/mode-width 0)
+; (setq sml/name-width 20)
+; (rich-minority-mode 1)
+; (sml/setup)
+; (set-face-attribute 'default nil :height 100)
 
 ;; display line numbers
 (global-linum-mode 1)
@@ -79,3 +101,17 @@
 ;; 'whitespace-space-after-tab nil
 ;; :background "#363636"
 ;; :foreground (face-attribute 'default :background))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(powerline-default-separator (quote shape))
+ '(powerline-default-separator-dir (quote (left . left)))
+ '(powerline-display-hud t))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
