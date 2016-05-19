@@ -48,17 +48,13 @@
 
 ;; Theme UI and colors
 (setq custom-safe-themes t)
-;;(load-theme 'monokai)
 (require 'moe-theme)
 (moe-theme-set-color 'cyan)
 (moe-dark)
 
-(require 'cl)
-; (require 'smart-mode-line)
 (require 'powerline)
 (powerline-evil-center-color-theme)
-;;(powerline-default-theme)
-;;(powerline-moe-theme)
+(powerline-moe-theme)
 ; (setq sml/theme 'powerline)
 ; (setq sml/mode-width 0)
 ; (setq sml/name-width 20)
@@ -106,12 +102,29 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(global-whitespace-mode t)
+ '(global-whitespace-newline-mode t)
  '(powerline-default-separator (quote shape))
- '(powerline-default-separator-dir (quote (left . left)))
- '(powerline-display-hud t))
+ '(whitespace-display-mappings
+   (quote
+    ((space-mark 32
+                 [183]
+                 [46])
+     (space-mark 160
+                 [164]
+                 [95])
+               ))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(whitespace-empty ((t (:foreground "color-240"))))
+ '(whitespace-line ((t nil)))
+ '(whitespace-newline ((t nil)))
+ '(whitespace-space ((t (:foreground "color-240"))))
+ '(whitespace-space-after-tab ((t (:foreground "color-240"))))
+ '(whitespace-trailing ((t (:foreground "color-240")))))
+
+
+
