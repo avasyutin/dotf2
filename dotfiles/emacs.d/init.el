@@ -67,9 +67,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(comment-empty-lines t)
- ;;'(fci-rule-character-color "color-238")
  '(global-whitespace-mode t)
  '(global-whitespace-newline-mode t)
+ '(indent-guide-threshold 1)
  '(powerline-default-separator (quote shape))
  '(require-final-newline t)
  '(whitespace-display-mappings
@@ -88,6 +88,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(indent-guide-face ((t (:foreground "color-242"))))
  '(whitespace-empty ((t (:background "color-237"))))
  '(whitespace-line ((t nil)))
  '(whitespace-newline ((t nil)))
@@ -95,13 +96,15 @@
  '(whitespace-space-after-tab ((t (:foreground "color-238"))))
  '(whitespace-trailing ((t (:foreground "color-238")))))
 
-;; Indent guides
+;; Indent guidesOA
 (indent-guide-global-mode)
-(setq indent-guide-char "⁞")
+(setq indent-guide-char "¦")
 (setq indent-guide-recursive t)
 
 ;; 80's column indicator
 (add-hook 'ruby-mode-hook 'fci-mode)
 (setq fci-rule-column 100)
+(setq fci-rule-color "color-243")
+
 
 (add-hook 'before-save-hook 'whitespace-cleanup 'untabify)
