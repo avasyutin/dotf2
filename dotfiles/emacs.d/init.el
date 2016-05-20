@@ -18,7 +18,6 @@
 (when (< emacs-major-version 24)
   ;; For important compatibility libraries like cl-lib.
   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
-
 ;; Make sure to have downloaded archive description.
 (or (file-exists-p package-user-dir)
     (package-refresh-contents))
@@ -32,8 +31,10 @@
                           'powerline
                           'moe-theme
                           'indent-guide
-                          'fill-column-indicator
-                          'neotree)
+                          'neotree
+                          'gruvbox-theme
+                          'base16-theme
+                          'ample-theme)
 
 ;; Evil mode settings
 (evil-mode 1)
@@ -49,7 +50,6 @@
             (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
             (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
 
-
 ;; Stop littering everywhere with save files, put them somewhere
 (setq backup-directory-alist '(("." . "~/.emacs-backups")))
 
@@ -61,8 +61,10 @@
 
 ;; Theme UI and colors
 (setq custom-safe-themes t)
+;;(load-theme 'ample t)
+;;(enable-theme 'ample)
 (require 'moe-theme)
-(moe-theme-set-color 'cyan)
+;;(moe-theme-set-color 'cyan)
 (moe-dark)
 
 (require 'powerline)
@@ -71,7 +73,6 @@
 
 ;; display line numbers
 (global-linum-mode 1)
-
 
 ;; Changes all yes/no questions to y/n type
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -82,6 +83,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(comment-empty-lines t)
+ '(evil-auto-indent nil)
  '(evil-leader/leader ",")
  '(global-whitespace-mode t)
  '(global-whitespace-newline-mode t)
@@ -97,29 +99,25 @@
                  [164]
                  [95])
      (tab-mark 9
-               [9655 9]
+               [8680 9]
                [92 9])))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(indent-guide-face ((t (:foreground "color-242"))))
+ '(indent-guide-face ((t (:foreground "color-238"))))
  '(whitespace-empty ((t (:background "color-237"))))
+ '(whitespace-hspace ((t (:foreground "color-237"))))
  '(whitespace-line ((t nil)))
  '(whitespace-newline ((t nil)))
  '(whitespace-space ((t (:foreground "color-238"))))
- '(whitespace-space-after-tab ((t (:foreground "color-238"))))
+ '(whitespace-space-after-tab ((t (:foreground "color-242"))))
  '(whitespace-trailing ((t (:foreground "color-238")))))
 
 ;; Indent guides
-(indent-guide-global-mode)
 (setq indent-guide-char "¦")
 (setq indent-guide-recursive t)
-
-;; 80's column indicator
-(add-hook 'ruby-mode-hook 'fci-mode)
-(setq fci-rule-column 100)
-(setq fci-rule-color "color-243")
+(add-hook 'prog-mode-hook 'indent-guide-mode)
 
 (add-hook 'before-save-hook 'whitespace-cleanup 'untabify)
