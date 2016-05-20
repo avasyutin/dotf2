@@ -26,16 +26,29 @@
 (package-initialize)
 
 (ensure-package-installed 'evil
+                          'evil-leader
                           'helm
                           'projectile
                           'powerline
                           'moe-theme
                           'indent-guide
                           'fill-column-indicator
-                          'smartparens)
+                          'neotree)
 
 ;; Evil mode settings
 (evil-mode 1)
+(global-evil-leader-mode)
+(evil-leader/set-key "n" 'neotree-toggle)
+
+;; NeoTree
+(setq neo-smart-open t)
+(add-hook 'neotree-mode-hook
+          (lambda ()
+            (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
+            (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
+            (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
+            (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
+
 
 ;; Stop littering everywhere with save files, put them somewhere
 (setq backup-directory-alist '(("." . "~/.emacs-backups")))
@@ -53,11 +66,12 @@
 (moe-dark)
 
 (require 'powerline)
-(powerline-evil-center-color-theme)
+;;(powerline-evil-center-color-theme)
 (powerline-moe-theme)
 
 ;; display line numbers
 (global-linum-mode 1)
+
 
 ;; Changes all yes/no questions to y/n type
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -68,6 +82,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(comment-empty-lines t)
+ '(evil-leader/leader ",")
  '(global-whitespace-mode t)
  '(global-whitespace-newline-mode t)
  '(indent-guide-threshold 1)
@@ -106,8 +121,5 @@
 (add-hook 'ruby-mode-hook 'fci-mode)
 (setq fci-rule-column 100)
 (setq fci-rule-color "color-243")
-
-;; Smartparens
-(add-hook 'prog-mode-hook #'smartparens-strict-mode)
 
 (add-hook 'before-save-hook 'whitespace-cleanup 'untabify)
