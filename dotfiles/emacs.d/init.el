@@ -31,7 +31,8 @@
                           'powerline
                           'moe-theme
                           'indent-guide
-                          'fill-column-indicator)
+                          'fill-column-indicator
+                          'smartparens)
 
 ;; Evil mode settings
 (evil-mode 1)
@@ -96,7 +97,7 @@
  '(whitespace-space-after-tab ((t (:foreground "color-238"))))
  '(whitespace-trailing ((t (:foreground "color-238")))))
 
-;; Indent guidesOA
+;; Indent guides
 (indent-guide-global-mode)
 (setq indent-guide-char "¦")
 (setq indent-guide-recursive t)
@@ -106,5 +107,7 @@
 (setq fci-rule-column 100)
 (setq fci-rule-color "color-243")
 
+;; Smartparens
+(add-hook 'prog-mode-hook #'smartparens-strict-mode)
 
 (add-hook 'before-save-hook 'whitespace-cleanup 'untabify)
