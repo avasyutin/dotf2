@@ -23,7 +23,6 @@
     (package-refresh-contents))
 
 (package-initialize)
-
 (ensure-package-installed 'evil
                           'evil-leader
                           'helm
@@ -45,8 +44,7 @@
 (setq neo-smart-open t)
 (add-hook 'neotree-mode-hook
           (lambda ()
-            (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
-            (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
+            (define-key evil-normal-state-local-map (kbd "H") 'neotree-hidden-file-toggle)
             (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
             (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
 
@@ -61,14 +59,11 @@
 
 ;; Theme UI and colors
 (setq custom-safe-themes t)
-;;(load-theme 'ample t)
-;;(enable-theme 'ample)
 (require 'moe-theme)
-;;(moe-theme-set-color 'cyan)
+(moe-theme-set-color 'cyan)
 (moe-dark)
 
 (require 'powerline)
-;;(powerline-evil-center-color-theme)
 (powerline-moe-theme)
 
 ;; display line numbers
@@ -88,6 +83,14 @@
  '(global-whitespace-mode t)
  '(global-whitespace-newline-mode t)
  '(indent-guide-threshold 1)
+ '(neo-hidden-regexp-list
+   (quote
+    ("^\\." "\\.pyc$" "~$" "^#.*#$" "\\.elc$" "^coverage$" "^log$" "^tmp$" "\\.tags$" "tags$" "tags.lock$" "\\.git$" "\\.swp$" "^\\.DS_Store$" "^\\.svn" "^\\.bundle$")))
+ '(neo-keymap-style (quote default))
+ '(neo-mode-line-type (quote neotree))
+ '(neo-show-hidden-files nil)
+ '(neo-window-fixed-size nil)
+ '(neo-window-width 35)
  '(powerline-default-separator (quote shape))
  '(require-final-newline t)
  '(whitespace-display-mappings
@@ -106,14 +109,15 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(indent-guide-face ((t (:foreground "color-238"))))
- '(whitespace-empty ((t (:background "color-237"))))
- '(whitespace-hspace ((t (:foreground "color-237"))))
+ '(indent-guide-face ((t (:foreground "color-241"))))
+ '(neo-expand-btn-face ((t (:foreground "#5fafd7" :background nil))))
+ '(whitespace-empty ((t (:background "color-240"))))
+ '(whitespace-hspace ((t (:foreground "color-240"))))
  '(whitespace-line ((t nil)))
  '(whitespace-newline ((t nil)))
- '(whitespace-space ((t (:foreground "color-238"))))
+ '(whitespace-space ((t (:foreground "color-240"))))
  '(whitespace-space-after-tab ((t (:foreground "color-242"))))
- '(whitespace-trailing ((t (:foreground "color-238")))))
+ '(whitespace-trailing ((t (:foreground "color-242")))))
 
 ;; Indent guides
 (setq indent-guide-char "¦")
