@@ -25,21 +25,15 @@
 (package-initialize)
 (ensure-package-installed 'evil
                           'evil-leader
-                          'helm
                           'projectile
                           'powerline
                           'moe-theme
                           'indent-guide
-                          'neotree
-                          'gruvbox-theme
-                          'base16-theme
-                          'ample-theme
                           'flx-ido)
 
 ;; Evil mode settings
 (evil-mode 1)
 (global-evil-leader-mode)
-(evil-leader/set-key "n" 'neotree-toggle)
 
 ;; IDO
 (ido-mode 1)
@@ -51,22 +45,20 @@
 
 
 ;; Projectile
-(add-hook 'prog-mode-hook 'projectile-mode)
+(projectile-global-mode)
 (setq projectile-switch-project-action 'projectile-dired)
-
-;; NeoTree
-(setq neo-smart-open t)
-(add-hook 'neotree-mode-hook
-          (lambda ()
-            (define-key evil-normal-state-local-map (kbd "H") 'neotree-hidden-file-toggle)
-            (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
-            (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
+(evil-leader/set-key "," 'projectile-find-file)
 
 ;; Stop littering everywhere with save files, put them somewhere
 (setq backup-directory-alist '(("." . "~/.emacs-backups")))
 
 ;; Tabs are evil
 (setq-default indent-tabs-mode nil)
+
+;; Save cursor position between opening files.
+(setq save-place-file "~/.emacs.d/saveplace")
+(setq-default save-place t)
+(require 'saveplace)
 
 ;; Hide menu bar
 (menu-bar-mode -1)
@@ -101,10 +93,6 @@
    (quote
     ("^\\." "\\.pyc$" "~$" "^#.*#$" "\\.elc$" "^coverage$" "^log$" "^tmp$" "\\.tags$" "tags$" "tags.lock$" "\\.git$" "\\.swp$" "^\\.DS_Store$" "^\\.svn" "^\\.bundle$")))
  '(neo-keymap-style (quote default))
- '(neo-mode-line-type (quote neotree))
- '(neo-show-hidden-files nil)
- '(neo-window-fixed-size nil)
- '(neo-window-width 35)
  '(powerline-default-separator (quote shape))
  '(require-final-newline t)
  '(whitespace-display-mappings
@@ -124,7 +112,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(indent-guide-face ((t (:foreground "color-241"))))
- '(neo-expand-btn-face ((t (:foreground "#5fafd7" :background nil))))
  '(whitespace-empty ((t (:background "color-240"))))
  '(whitespace-hspace ((t (:foreground "color-240"))))
  '(whitespace-line ((t nil)))

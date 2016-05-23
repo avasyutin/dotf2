@@ -44,3 +44,4 @@ server/
 python-*-docs-html
 /.cask/
 playbook.retry
+dotfiles/emacs.d/saveplace
