@@ -33,12 +33,26 @@
                           'neotree
                           'gruvbox-theme
                           'base16-theme
-                          'ample-theme)
+                          'ample-theme
+                          'flx-ido)
 
 ;; Evil mode settings
 (evil-mode 1)
 (global-evil-leader-mode)
 (evil-leader/set-key "n" 'neotree-toggle)
+
+;; IDO
+(ido-mode 1)
+(ido-everywhere 1)
+(flx-ido-mode 1)
+;; disable ido faces to see flx highlights.
+(setq ido-enable-flex-matching t)
+(setq ido-use-faces nil)
+
+
+;; Projectile
+(add-hook 'prog-mode-hook 'projectile-mode)
+(setq projectile-switch-project-action 'projectile-dired)
 
 ;; NeoTree
 (setq neo-smart-open t)
