@@ -50,7 +50,7 @@
 (evil-leader/set-key "," 'projectile-find-file)
 
 ;; Stop littering everywhere with save files, put them somewhere
-(setq backup-directory-alist '(("." . "~/.emacs-backups")))
+(setq backup-directory-alist '((".*" . "~/.emacs-backups")))
 
 ;; Tabs are evil
 (setq-default indent-tabs-mode nil)
