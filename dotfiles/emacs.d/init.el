@@ -29,7 +29,8 @@
                           'powerline
                           'moe-theme
                           'indent-guide
-                          'flx-ido)
+                          'flx-ido
+                          'ag)
 
 ;; Evil mode settings
 (evil-mode 1)
@@ -94,6 +95,8 @@
     ("^\\." "\\.pyc$" "~$" "^#.*#$" "\\.elc$" "^coverage$" "^log$" "^tmp$" "\\.tags$" "tags$" "tags.lock$" "\\.git$" "\\.swp$" "^\\.DS_Store$" "^\\.svn" "^\\.bundle$")))
  '(neo-keymap-style (quote default))
  '(powerline-default-separator (quote shape))
+ '(projectile-git-command "git ls-files -zco --exclude-standard --exclude='.keep'")
+ '(projectile-globally-ignored-files (quote ("TAGS" ".keep")))
  '(require-final-newline t)
  '(whitespace-display-mappings
    (quote
