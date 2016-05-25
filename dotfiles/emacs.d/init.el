@@ -35,6 +35,8 @@
 ;; Evil mode settings
 (evil-mode 1)
 (global-evil-leader-mode)
+(evil-leader/set-key "b" 'evil-switch-to-windows-last-buffer)
+(evil-leader/set-key "p" (lambda () (interactive) (dired ".")))
 
 ;; IDO
 (ido-mode 1)
@@ -44,11 +46,11 @@
 (setq ido-enable-flex-matching t)
 (setq ido-use-faces nil)
 
-
 ;; Projectile
 (projectile-global-mode)
 (setq projectile-switch-project-action 'projectile-dired)
 (evil-leader/set-key "," 'projectile-find-file)
+(evil-leader/set-key "." 'projectile-switch-to-buffer)
 
 ;; Stop littering everywhere with save files, put them somewhere
 (setq backup-directory-alist '((".*" . "~/.emacs-backups")))
