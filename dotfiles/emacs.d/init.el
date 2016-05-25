@@ -30,8 +30,7 @@
                           'moe-theme
                           'indent-guide
                           'flx-ido
-                          'ag
-                          'enh-ruby-mode)
+                          'ag)
 
 ;; Evil mode settings
 (evil-mode 1)
@@ -132,6 +131,3 @@
 (add-hook 'prog-mode-hook 'indent-guide-mode)
 
 (add-hook 'before-save-hook 'whitespace-cleanup 'untabify)
-
-;; Enh-ruby-mode
-(add-hook 'ruby-mode-hook 'enh-ruby-mode)
