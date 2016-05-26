@@ -30,7 +30,8 @@
                           'moe-theme
                           'indent-guide
                           'flx-ido
-                          'ag)
+                          'ag
+                          'company)
 
 ;; Evil mode settings
 (evil-mode 1)
@@ -129,5 +130,6 @@
 (setq indent-guide-char "¦")
 (setq indent-guide-recursive t)
 (add-hook 'prog-mode-hook 'indent-guide-mode)
+(add-hook 'prog-mode-hook 'company-mode)
 
 (add-hook 'before-save-hook 'whitespace-cleanup 'untabify)
