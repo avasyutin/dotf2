@@ -32,6 +32,14 @@
                           'flx-ido
                           'ag
                           'company)
+;; 		asdkasdjasd 	       asdas       
+	;; asdlasdjas ldas asldjaslkd j               
+     ;;d asd lasdk      asdlkj                			asd as        
+			;; asdasd lkas dasldk jasd as     	 asdas 		 asdas d	
+;; 			asdas dasd asd as  			asdas 	
+     		         		;; asdas da a 		asdas as 		
+
+
 
 ;; Evil mode settings
 (evil-mode 1)
@@ -132,4 +140,7 @@
 (add-hook 'prog-mode-hook 'indent-guide-mode)
 (add-hook 'prog-mode-hook 'company-mode)
 
-(add-hook 'before-save-hook 'whitespace-cleanup 'untabify)
+(setq company-idle-delay 0)
+
+;;(add-hook 'before-save-hook 'whitespace-cleanup 'untabify)
+;;(add-hook 'before-save-hook 'whitespace-cleanup)
