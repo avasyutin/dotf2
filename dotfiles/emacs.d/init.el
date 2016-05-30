@@ -31,7 +31,9 @@
                           'indent-guide
                           'flx-ido
                           'ag
-                          'company)
+                          'company
+                          'clojure-mode
+                          'rainbow-delimiters)
 ;; 		asdkasdjasd 	       asdas       
 	;; asdlasdjas ldas asldjaslkd j               
      ;;d asd lasdk      asdlkj                			asd as        
@@ -98,8 +100,6 @@
  '(comment-empty-lines t)
  '(evil-auto-indent nil)
  '(evil-leader/leader ",")
- '(global-whitespace-mode t)
- '(global-whitespace-newline-mode t)
  '(indent-guide-threshold 1)
  '(neo-hidden-regexp-list
    (quote
@@ -108,6 +108,7 @@
  '(powerline-default-separator (quote shape))
  '(projectile-git-command "git ls-files -zco --exclude-standard --exclude='.keep'")
  '(projectile-globally-ignored-files (quote ("TAGS" ".keep")))
+ '(rainbow-delimiters-outermost-only-face-count 1)
  '(require-final-newline t)
  '(whitespace-display-mappings
    (quote
@@ -118,7 +119,7 @@
                  [164]
                  [95])
      (tab-mark 9
-               [8680 9]
+               [9655 9]
                [92 9])))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -128,11 +129,13 @@
  '(indent-guide-face ((t (:foreground "color-241"))))
  '(whitespace-empty ((t (:background "color-240"))))
  '(whitespace-hspace ((t (:foreground "color-240"))))
+ '(whitespace-indentation ((t (:foreground "color-250"))))
  '(whitespace-line ((t nil)))
  '(whitespace-newline ((t nil)))
  '(whitespace-space ((t (:foreground "color-240"))))
- '(whitespace-space-after-tab ((t (:foreground "color-242"))))
- '(whitespace-trailing ((t (:foreground "color-242")))))
+ '(whitespace-space-after-tab ((t (:foreground "color-250"))))
+ '(whitespace-space-before-tab ((t (:foreground "color-250"))))
+ '(whitespace-trailing ((t (:foreground "color-250")))))
 
 ;; Indent guides
 (setq indent-guide-char "¦")
@@ -144,3 +147,5 @@
 
 ;;(add-hook 'before-save-hook 'whitespace-cleanup 'untabify)
 ;;(add-hook 'before-save-hook 'whitespace-cleanup)
+(add-hook 'prog-mode-hook 'whitespace-mode)
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
