@@ -33,7 +33,8 @@
                           'ag
                           'company
                           'clojure-mode
-                          'rainbow-delimiters)
+                          'rainbow-delimiters
+                          'git-gutter)
 ;; 		asdkasdjasd 	       asdas       
 	;; asdlasdjas ldas asldjaslkd j               
      ;;d asd lasdk      asdlkj                			asd as        
@@ -100,6 +101,9 @@
  '(comment-empty-lines t)
  '(evil-auto-indent nil)
  '(evil-leader/leader ",")
+ '(git-gutter:added-sign "++")
+ '(git-gutter:deleted-sign "--")
+ '(git-gutter:modified-sign "±±")
  '(indent-guide-threshold 1)
  '(neo-hidden-regexp-list
    (quote
@@ -126,7 +130,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(git-gutter:added ((t (:background nil :foreground "brightgreen" :weight bold))))
+ '(git-gutter:deleted ((t (:background nil :foreground "brightred" :weight bold))))
+ '(git-gutter:modified ((t (:background nil :foreground "brightyellow" :weight bold))))
  '(indent-guide-face ((t (:foreground "color-241"))))
+ '(rainbow-delimiters-depth-1-face ((t (:foreground nil))))
  '(whitespace-empty ((t (:background "color-240"))))
  '(whitespace-hspace ((t (:foreground "color-240"))))
  '(whitespace-indentation ((t (:foreground "color-250"))))
@@ -138,16 +146,16 @@
  '(whitespace-trailing ((t (:foreground "color-250")))))
 
 ;; Indent guides
-(setq indent-guide-char "¦")
-(setq indent-guide-recursive t)
-(add-hook 'prog-mode-hook 'indent-guide-mode)
+;;(setq indent-guide-char "¦")
+;;(setq indent-guide-recursive t)
+;;(add-hook 'prog-mode-hook 'indent-guide-mode)
 (add-hook 'prog-mode-hook 'company-mode)
 
 (setq company-idle-delay 0)
 
 ;;(add-hook 'before-save-hook 'whitespace-cleanup 'untabify)
 ;;(add-hook 'before-save-hook 'whitespace-cleanup)
-(add-hook 'prog-mode-hook 'whitespace-mode)
+;;(add-hook 'prog-mode-hook 'whitespace-mode)
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
 
@@ -164,3 +172,8 @@
 (setq interprogram-cut-function 'paste-to-osx)
 (setq interprogram-paste-function 'copy-from-osx)
 
+;; git gutter
+;; If you would like to use git-gutter.el and linum-mode
+(git-gutter:linum-setup)
+;; If you enable git-gutter-mode for some modes
+(add-hook 'prog-mode-hook 'git-gutter-mode)
