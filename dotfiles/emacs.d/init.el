@@ -34,15 +34,14 @@
                           'company
                           'clojure-mode
                           'rainbow-delimiters
-                          'git-gutter)
-;; 		asdkasdjasd 	       asdas       
-	;; asdlasdjas ldas asldjaslkd j               
-     ;;d asd lasdk      asdlkj                			asd as        
-			;; asdasd lkas dasldk jasd as     	 asdas 		 asdas d	
-;; 			asdas dasd asd as  			asdas 	
-     		         		;; asdas da a 		asdas as 		
-
-
+                          'git-gutter
+                          'monokai-theme)
+;; 		asdkasdjasd 	       asdas
+	;; asdlasdjas ldas asldjaslkd j
+     ;;d asd lasdk      asdlkj                			asd as
+			;; asdasd lkas dasldk jasd as     	 asdas 		 asdas d
+;; 			asdas dasd asd as  			asdas
+     		         		;; asdas da a 		asdas as
 
 ;; Evil mode settings
 (evil-mode 1)
@@ -103,7 +102,7 @@
  '(evil-leader/leader ",")
  '(git-gutter:added-sign "++")
  '(git-gutter:deleted-sign "--")
- '(git-gutter:modified-sign "±±")
+ '(git-gutter:modified-sign "**")
  '(indent-guide-threshold 1)
  '(neo-hidden-regexp-list
    (quote
@@ -157,7 +156,6 @@
 ;;(add-hook 'before-save-hook 'whitespace-cleanup)
 ;;(add-hook 'prog-mode-hook 'whitespace-mode)
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
-
 
 ;; Clipboard support
 (defun copy-from-osx ()
