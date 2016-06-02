@@ -45,3 +45,5 @@ python-*-docs-html
 /.cask/
 playbook.retry
 dotfiles/emacs.d/saveplace
+dotfiles/nvim/plugged/*
+dotfiles/nvim/autoload/plug.vim

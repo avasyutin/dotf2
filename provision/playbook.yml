@@ -3,10 +3,9 @@
     - zsh
     - emacs
     - git
+    - vim
     # - rubygems
     # - ctags
-    # - vim
-    # - neovim
     # - tmux
     # - iterm2
     # - mysql
