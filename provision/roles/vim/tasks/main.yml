@@ -1,3 +1,5 @@
+- name: 'create directory for backups and swaps'
+  file: path=~/.vimtmp state=directory
 - name: 'symlink nvim config'
   file: src={{dotfiles_dir}}/nvim dest=~/.config/nvim state=link
 - name: 'symlink vim config'
@@ -5,7 +7,6 @@
 - name: 'symlink vim directory'
   file: src={{dotfiles_dir}}/nvim dest=~/.vim state=link
 - name: 'create autoload dir'
-  file: path={{dotfiles_dir}}/nvim/autoload state=directory 
+  file: path={{dotfiles_dir}}/nvim/autoload state=directory
 - name: 'download vim-plug'
   get_url: url=https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim dest={{dotfiles_dir}}/nvim/autoload/plug.vim
-
