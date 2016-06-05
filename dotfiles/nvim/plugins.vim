@@ -61,3 +61,8 @@ let g:startify_skiplist = [
   \ ]
 let g:startify_custom_footer =
   \ ['', "   Vim is charityware. Please read ':help uganda'.", '']
+
+" NERDCommenter
+let g:NERDSpaceDelims = 1
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'

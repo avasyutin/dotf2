@@ -12,4 +12,6 @@ Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 Plug 'scrooloose/nerdcommenter'
 Plug 'mhinz/vim-startify'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-fugitive'
 call plug#end()
