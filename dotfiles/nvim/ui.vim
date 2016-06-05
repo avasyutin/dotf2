@@ -3,7 +3,7 @@ set background=dark
 if has('nvim')
   color base16-monokai
 else
-  color peachpuff
+  color jellybeans
 endif
 
 " Syntax highlighting
