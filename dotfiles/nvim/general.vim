@@ -34,8 +34,8 @@ set tags=./.tags;
 " Enable access to clipboard
 set clipboard+=unnamedplus
 
-" Underscore as word-break
-set iskeyword-=_
+" Underscore as word-break (it usefull but breaks syntax highlighting for ruby)
+" set iskeyword-=_
 
 " Strip trailing spaces before save.
 function! <SID>StripTrailingWhitespaces()

@@ -66,3 +66,8 @@ let g:startify_custom_footer =
 let g:NERDSpaceDelims = 1
 " Align line-wise comment delimiters flush left instead of following code indentation
 let g:NERDDefaultAlign = 'left'
+
+" Deoplete autocomplete
+if has('nvim')
+  let g:deoplete#enable_at_startup = 1
+endif
