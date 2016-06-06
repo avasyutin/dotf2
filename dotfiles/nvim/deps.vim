@@ -28,6 +28,7 @@ Plug 'mhinz/vim-startify'
 
 " Programming
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
+Plug 'slim-template/vim-slim'
 Plug 'scrooloose/nerdcommenter'
 
 " Autocompletion
