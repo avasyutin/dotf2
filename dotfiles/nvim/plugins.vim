@@ -1,8 +1,10 @@
 " Indent line
 let g:indentLine_char='¦'
+let g:indentLine_fileType=['ruby', 'vim']
 
 " Airline
 let g:airline_powerline_fonts=1
+let g:airline_enable_fugitive=1
 
 " CtrlP settings
 if executable('ag')
@@ -27,22 +29,23 @@ endif
 " NERDTree settings
 let NERDTreeIgnore=['\~$', '^coverage$', '^log$', '^tmp$', '\.tags$', 'tags$', 'tags.lock$', '^\.git$', '\.swp$', '^\.svn', '^\.DS_Store$']
 let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "~",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ "Unknown"   : "?"
-    \ }
+  \ "Modified"  : "~",
+  \ "Staged"    : "✚",
+  \ "Untracked" : "✭",
+  \ "Renamed"   : "➜",
+  \ "Unmerged"  : "═",
+  \ "Deleted"   : "✖",
+  \ "Dirty"     : "✗",
+  \ "Clean"     : "✔︎",
+  \ "Unknown"   : "?"
+  \ }
 
 " Startify settings.
 let g:startify_custom_header =
   \ map(split(system('fortune | cowsay -f tux'), '\n'), '"   ". v:val') + ['','']
 let g:startify_files_number = 8
 let g:startify_relative_path = 1
+let g:startify_change_to_vcs_root = 1
 let g:startify_list_order = [
   \ ['   LRU within this dir:'],
   \ 'dir',
