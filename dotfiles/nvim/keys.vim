@@ -20,3 +20,14 @@ map <Esc><Esc> :noh<CR>
 
 " Convenient moving around frames
 nnoremap <Tab> <C-w><C-w>
+
+" Switch between nu/rnu
+function! RnuToggle()
+  if(&relativenumber == 1)
+    set nornu
+  else
+    set rnu
+  endif
+endfunc
+
+nnoremap <leader>rr :call RnuToggle()<CR>
