@@ -34,4 +34,7 @@ Plug 'scrooloose/nerdcommenter'
 " Autocompletion
 Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 
+" Searching
+Plug 'rking/ag.vim'
+
 call plug#end()

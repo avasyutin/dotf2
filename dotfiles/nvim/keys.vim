@@ -31,3 +31,9 @@ function! RnuToggle()
 endfunc
 
 nnoremap <leader>rr :call RnuToggle()<CR>
+
+" Quick ag search
+nmap <leader>g :Ag!<CR>
+
+" Quick save and exit!
+nmap <leader>qq :wqa!<CR>

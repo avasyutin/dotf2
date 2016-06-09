@@ -74,3 +74,8 @@ let g:NERDDefaultAlign = 'left'
 if has('nvim')
   let g:deoplete#enable_at_startup = 1
 endif
+
+" Ag
+if executable('ag')
+  let g:ag_working_path_mode='r'
+end
