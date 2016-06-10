@@ -8,6 +8,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'vim-scripts/L9'
 Plug 'tomtom/tlib_vim'
+Plug 'Raimondi/delimitMate'
 
 " UI
 Plug 'vim-airline/vim-airline'
@@ -28,6 +29,8 @@ Plug 'mhinz/vim-startify'
 
 " Programming
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
+Plug 'tpope/vim-rails', { 'for': 'ruby' }
+Plug 'tpope/vim-bundler', { 'for': 'ruby' }
 Plug 'slim-template/vim-slim'
 Plug 'scrooloose/nerdcommenter'
 
