@@ -30,10 +30,10 @@ endif
 let NERDTreeIgnore=['\~$', '^coverage$', '^log$', '^tmp$', '\.tags$', 'tags$', 'tags.lock$', '^\.git$', '\.swp$', '^\.svn', '^\.DS_Store$']
 let g:NERDTreeIndicatorMapCustom = {
   \ "Modified"  : "~",
-  \ "Staged"    : "✚",
+  \ "Staged"    : "+",
   \ "Untracked" : "✭",
   \ "Renamed"   : "➜",
-  \ "Unmerged"  : "═",
+  \ "Unmerged"  : "-",
   \ "Deleted"   : "✖",
   \ "Dirty"     : "✗",
   \ "Clean"     : "✔︎",
