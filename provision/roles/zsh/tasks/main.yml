@@ -1,0 +1,2 @@
+- name: 'symlink zshrc'
+  file: src={{dotfiles_dir}}/zshrc dest=~/.zshrc state=link

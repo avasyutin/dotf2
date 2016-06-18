@@ -1,2 +1,0 @@
-- name: config
-  shell: 'echo "We should create link to git files"'

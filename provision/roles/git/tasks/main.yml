@@ -1,0 +1,8 @@
+- name: set user name
+  shell: git config --global user.name '{{user_name}}'
+- name: set user email
+  shell: 'git config --global user.email {{user_email}}'
+- name: set global gitignore
+  shell: 'git config --global core.excludesfile ~/.gitignore_global'
+- name: 'set push.default simple'
+  shell: 'git config --global push.default simple'

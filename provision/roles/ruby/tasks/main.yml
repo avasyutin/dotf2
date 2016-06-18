@@ -1,0 +1,2 @@
+- name: 'symlink gemrc'
+  file: src={{dotfiles_dir}}/gemrc dest=~/.gemrc state=link
