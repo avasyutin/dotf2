@@ -89,11 +89,16 @@ export GOBIN=$GOPATH/bin
 
 # Aliases
 alias nvim="NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
-alias zshconfig="nvim ~/.zshrc"
-alias ohmyzsh="cd ~/.oh-my-zsh; ls -la"
-alias nvimconf="nvim ~/.config/nvim/init.vim"
+alias zshconfig="$EDITOR ~/.zshrc"
+alias nvimconf="$EDITOR ~/.config/nvim/init.vim"
 alias subl="subl -n"
-alias tmux="TERM=screen-256color-bce tmux"
+
+# Aliases for Tmux
+alias tmux='tmux -2'
+alias ta='tmux attach -t'
+alias tnew='tmux new -s'
+alias tls='tmux ls'
+alias tkill='tmux kill-session -t'
 
 # Apertium tools
 # export PATH="$HOME/Local/bin:$PATH"

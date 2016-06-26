@@ -8,13 +8,12 @@
       private: false
 
   roles:
-    - zsh
-    - emacs
-    - git
-    - ruby
-    - vim
-    # - rubygems
+    # - zsh
+    # - emacs
+    # - git
+    # - ruby
+    # - vim
+    - tmux
     # - ctags
     # - tmux
-    # - iterm2
     # - mysql

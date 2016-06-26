@@ -1,0 +1,2 @@
+- name: 'symlink config'
+  file: src={{dotfiles_dir}}/tmux.conf dest=~/.tmux.conf state=link
