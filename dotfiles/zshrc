@@ -58,6 +58,7 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH="/Applications/LibreOffice.app/Contents/MacOS:$PATH"
 export PATH="$HOME/bin:$PATH"
 export PATH="/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+export PATH=/usr/pgsql-9.5/bin:$PATH
 export PATH="./node_modules/.bin:$PATH"
 
 # export MANPATH="/usr/local/man:$MANPATH"
