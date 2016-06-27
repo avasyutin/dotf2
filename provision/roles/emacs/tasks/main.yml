@@ -1,2 +1,0 @@
-- name: 'symlink .emacs.d'
-  file: src={{dotfiles_dir}}/emacs.d dest=~/.emacs.d state=link
