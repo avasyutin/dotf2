@@ -8,7 +8,10 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'vim-scripts/L9'
 Plug 'tomtom/tlib_vim'
+Plug 'marcweber/vim-addon-mw-utils'
+
 Plug 'Raimondi/delimitMate'
+Plug 'tpope/vim-endwise'
 
 " UI
 Plug 'vim-airline/vim-airline'
