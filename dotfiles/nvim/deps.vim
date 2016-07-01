@@ -19,6 +19,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'chriskempson/base16-vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'Yggdroot/indentLine'
+Plug 'junegunn/seoul256.vim'
+Plug 'zeis/vim-kolor'
 
 " Git
 Plug 'airblade/vim-gitgutter'
