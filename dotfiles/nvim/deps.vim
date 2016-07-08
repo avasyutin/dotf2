@@ -42,6 +42,10 @@ Plug 'scrooloose/nerdcommenter'
 " Autocompletion
 Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 
+" Snippets
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
+
 " Searching
 Plug 'rking/ag.vim'
 
