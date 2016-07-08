@@ -93,6 +93,7 @@ alias nvim="NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
 alias zshconfig="$EDITOR ~/.zshrc"
 alias nvimconf="$EDITOR ~/.config/nvim/init.vim"
 alias subl="subl -n"
+alias nau='nautilus . &'
 
 # Aliases for Tmux
 alias tmux='tmux -2'
