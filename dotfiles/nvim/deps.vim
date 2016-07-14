@@ -38,6 +38,7 @@ Plug 'tpope/vim-rails', { 'for': 'ruby' }
 Plug 'tpope/vim-bundler', { 'for': 'ruby' }
 Plug 'slim-template/vim-slim'
 Plug 'scrooloose/nerdcommenter'
+Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 
 " Autocompletion
 Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
