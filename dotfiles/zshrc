@@ -128,5 +128,3 @@ export BUNDLE_JOBS=4
 
 # Disable cowsay for Ansible
 export ANSIBLE_NOCOWS=1
-
-export FZF_COMPLETION_TRIGGER='§'
