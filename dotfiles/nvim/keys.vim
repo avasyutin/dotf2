@@ -18,6 +18,8 @@ nnoremap <leader>n :NERDTreeToggle<CR>
 " Cleanup search highlight
 map <Esc><Esc> :noh<CR>
 
+imap jj <Esc>
+
 " Convenient moving around frames
 nnoremap <Tab> <C-w><C-w>
 
