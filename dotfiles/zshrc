@@ -62,7 +62,9 @@ export PATH=/usr/pgsql-9.5/bin:$PATH
 export PATH="./node_modules/.bin:$PATH"
 
 # export MANPATH="/usr/local/man:$MANPATH"
-export PGDATA=$HOME/pg-data
+if [[ `uname` != *"Linux"* ]]; then
+  export PGDATA=$HOME/pg-data
+fi
 export DISABLE_SPRING=1
 
 # You may need to manually set your language environment
