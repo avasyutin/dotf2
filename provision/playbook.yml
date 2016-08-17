@@ -8,11 +8,8 @@
       private: false
 
   roles:
-    # - zsh
-    # - git
-    # - ruby
-    # - vim
+    - zsh
+    - git
+    - ruby
+    - vim
     - tmux
-    # - ctags
-    # - tmux
-    # - mysql
