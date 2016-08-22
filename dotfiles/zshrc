@@ -61,7 +61,6 @@ export PATH="/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/
 export PATH=/usr/pgsql-9.5/bin:$PATH
 export PATH="./node_modules/.bin:$PATH"
 
-# export MANPATH="/usr/local/man:$MANPATH"
 if [[ `uname` != *"Linux"* ]]; then
   export PGDATA=$HOME/pg-data
 fi
@@ -81,8 +80,8 @@ else
 fi
 
 # Go Lang environment variables
-export GOPATH=$HOME/work/go
-export GOBIN=$GOPATH/bin
+# export GOPATH=$HOME/work/go
+# export GOBIN=$GOPATH/bin
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -103,13 +102,6 @@ alias ta='tmux attach -t'
 alias tnew='tmux new -s'
 alias tls='tmux ls'
 alias tkill='tmux kill-session -t'
-
-# Apertium tools
-# export PATH="$HOME/Local/bin:$PATH"
-# export PKG_CONFIG_PATH="$HOME/Local/lib/pkgconfig:$PKG_CONFIG_PATH"
-# export LD_LIBRARY_PATH="$HOME/Local/lib:$LD_LIBRARY_PATH"
-# export DYLD_LIBRARY_PATH="$HOME/Local/lib:$DYLD_LIBRARY_PATH"
-# export DYLD_FALLBACK_LIBRARY_PATH="$HOME/Local/lib"
 
 # Check rbenv or rvm and init corresponding manager.
 if [ -d ~/.rbenv ]; then
