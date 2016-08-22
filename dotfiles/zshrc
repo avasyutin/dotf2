@@ -79,10 +79,6 @@ else
   export EDITOR='nvim'
 fi
 
-# Go Lang environment variables
-# export GOPATH=$HOME/work/go
-# export GOBIN=$GOPATH/bin
-
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 

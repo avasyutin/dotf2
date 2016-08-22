@@ -1,6 +1,7 @@
 " Colorscheme
 set background=dark
 if has('nvim')
+  set termguicolors
   color base16-monokai
 else
   color jellybeans
