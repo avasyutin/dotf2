@@ -1,6 +1,6 @@
 " Indent line
 let g:indentLine_char='¦'
-let g:indentLine_fileType=['ruby', 'vim']
+let g:indentLine_fileType=['ruby', 'vim', 'coffee', 'javascript', 'css', 'scss', 'html', 'slim']
 
 " Airline
 let g:airline_powerline_fonts=1

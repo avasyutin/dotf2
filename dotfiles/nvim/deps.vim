@@ -20,7 +20,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'chriskempson/base16-vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'Yggdroot/indentLine'
-Plug 'junegunn/seoul256.vim'
 Plug 'zeis/vim-kolor'
 
 " Git
@@ -40,6 +39,7 @@ Plug 'tpope/vim-bundler', { 'for': 'ruby' }
 Plug 'slim-template/vim-slim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+Plug 'chase/vim-ansible-yaml'
 
 " Autocompletion
 Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
