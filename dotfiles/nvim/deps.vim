@@ -12,6 +12,7 @@ Plug 'marcweber/vim-addon-mw-utils'
 
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-endwise'
+Plug 'editorconfig/editorconfig-vim'
 
 " UI
 Plug 'vim-airline/vim-airline'
