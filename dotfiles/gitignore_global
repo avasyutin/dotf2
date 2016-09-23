@@ -1,0 +1,16 @@
+note.txt
+/.bundle
+/vendor/bundle
+*.sublime-*
+dump.rdb
+.DS_Store
+.tags
+.tags_sorted_by_file
+._gems
+Readme.md.html
+/._bundle
+doc/tags
+*.xlsx#
+.rake_tasks
+.projectile
+.netrwhist
