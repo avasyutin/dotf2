@@ -54,15 +54,22 @@ plugins=(git osx terminalapp brew copydir copyfile gem rake-fast rails bundler r
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-export PATH=$PATH:/usr/local/go/bin
-export PATH="/Applications/LibreOffice.app/Contents/MacOS:$PATH"
 export PATH="$HOME/bin:$PATH"
 export PATH="/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
-export PATH=/usr/pgsql-9.5/bin:$PATH
 export PATH="./node_modules/.bin:$PATH"
+
+# Settings for golang
+if [ -d $HOME/opt/go ]; then
+  export GOROOT=$HOME/opt/go
+  export GOPATH=$HOME/work/gocode
+  export LGOBIN=$GOPATH/bin
+  export PATH=$GOROOT/bin:$LGOBIN:$PATH
+fi
 
 if [[ `uname` != *"Linux"* ]]; then
   export PGDATA=$HOME/pg-data
+  export PATH=$PATH:/usr/local/go/bin
+  export PATH="/Applications/LibreOffice.app/Contents/MacOS:$PATH"
 fi
 export DISABLE_SPRING=1
 
