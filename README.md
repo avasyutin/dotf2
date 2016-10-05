@@ -9,4 +9,5 @@ After neovim was installed run it and execute:
 
 ## Pass variables to the playbook from command line
 
-  ansible-playbook -i provision/inventory.ini provision/playbook.yml --extra-vars='user_name=Alex Vasyutin user_email=alex.vasyutin@gmail.com'
+
+    $ ansible-playbook -i provision/inventory.ini provision/playbook.yml --extra-vars='user_name=Alex Vasyutin user_email=alex.vasyutin@gmail.com'
