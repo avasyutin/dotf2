@@ -1,15 +1,8 @@
 - hosts: localhost
-  vars_prompt:
-    - name: user_email
-      prompt: 'Enter user email'
-      private: false
-    - name: user_name
-      prompt: 'Enter user name'
-      private: false
-
   roles:
     - zsh
-    - git
+    - { role: git, tags: git }
     - ruby
     - vim
     - tmux
+    - { role: emacs, tags: emacs }
