@@ -22,7 +22,9 @@
 (ensure-package-installed 'evil
                           'evil-leader
 			  'flx-ido
-			  'projectile)
+			  'projectile
+			  'moe-theme
+			  'powerline)
 
 ;; Evil mode settings
 (evil-mode 1)
@@ -47,6 +49,12 @@
 (setq projectile-switch-project-action 'projectile-dired)
 (evil-leader/set-key "," 'projectile-find-file)
 (evil-leader/set-key "." 'projectile-switch-to-buffer)
+
+;; UI
+(require 'moe-theme)
+(moe-theme-set-color 'cyan)
+(powerline-moe-theme)
+(moe-dark)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
