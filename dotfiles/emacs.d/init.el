@@ -24,7 +24,8 @@
 			  'flx-ido
 			  'projectile
 			  'moe-theme
-			  'powerline)
+			  'powerline
+			  'use-package)
 
 ;; Evil mode settings
 (evil-mode 1)
