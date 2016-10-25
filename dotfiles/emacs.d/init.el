@@ -28,16 +28,17 @@
 			  'use-package)
 
 ;; Projectile
-(projectile-global-mode)
-(setq projectile-switch-project-action 'projectile-dired)
+(use-package projectile
+  :init
+  (setq projectile-switch-project-action 'projectile-dired)
+  :config
+  (projectile-global-mode))
 
 ;; Evil mode settings
 (use-package evil
   :init
   (progn
     (use-package evil-leader
-      :init
-      (global-evil-leader-mode)
       :config
       (progn
 	(evil-leader/set-leader ",")
@@ -45,28 +46,38 @@
           "," 'projectile-find-file
 	  "." 'projectile-switch-to-buffer
 	  "b" 'evil-switch-to-windows-last-buffer
-	  "p" (lambda () (interactive) (dired ".")))))
-    (evil-mode 1)))
+	  "p" (lambda () (interactive) (dired "."))))
+      	(global-evil-leader-mode)))
+  :config
+  (evil-mode 1))
 
 ;; display line numbers
 (use-package linum
-  :init
+  :config
   (global-linum-mode 1))
 
 ;; IDO
-(ido-mode 1)
-(ido-everywhere 1)
-(flx-ido-mode 1)
-;; disable ido faces to see flx highlights.
-(setq ido-enable-flex-matching t)
-(setq ido-use-faces nil)
+(use-package ido
+  :init
+  (progn
+    (setq ido-enable-flex-matching t)
+    (setq ido-use-faces nil)
+    (use-package flx-ido
+      :config
+      (flx-ido-mode 1)))
+  :config
+  (progn
+    (ido-mode 1)
+    (ido-everywhere 1)))
 
 ;; UI
-(require 'moe-theme)
-(moe-theme-set-color 'cyan)
-(powerline-moe-theme)
-(moe-dark)
-
+(use-package moe-theme
+  :config
+  (progn
+    (moe-theme-set-color 'cyan)
+    (powerline-moe-theme)
+    (moe-dark)))
+    
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
