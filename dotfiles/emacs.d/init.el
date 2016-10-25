@@ -77,7 +77,22 @@
     (moe-theme-set-color 'cyan)
     (powerline-moe-theme)
     (moe-dark)))
-    
+
+;; Save cursor position
+(use-package saveplace
+  :init
+  (progn
+    (setq save-place-file "~/.emacs.d/saveplace")
+    (setq-default save-place t)))
+
+;; Stop littering everywhere with save files, put them somewhere
+;; (setq backup-directory-alist '((".*" . "~/.emacs-backups")))
+
+;; Tabs are evil
+(use-package indent-tabs
+  :init
+  (setq-default indent-tabs-mode nil))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
