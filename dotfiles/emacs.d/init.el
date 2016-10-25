@@ -27,6 +27,9 @@
 			  'powerline
 			  'use-package)
 
+;; Changes all yes/no questions to y/n type
+(fset 'yes-or-no-p 'y-or-n-p)
+
 ;; Projectile
 (use-package projectile
   :init
@@ -60,8 +63,9 @@
 (use-package ido
   :init
   (progn
-    (setq ido-enable-flex-matching t)
-    (setq ido-use-faces nil)
+    (setq
+     ido-enable-flex-matching t
+     ido-use-faces nil)
     (use-package flx-ido
       :config
       (flx-ido-mode 1)))
@@ -83,7 +87,12 @@
   :init
   (progn
     (setq save-place-file "~/.emacs.d/saveplace")
-    (setq-default save-place t)))
+    (setq-default save-place t))
+  :config
+  (save-place-mode 1))
+
+;; Backup file settings
+
 
 ;; Stop littering everywhere with save files, put them somewhere
 ;; (setq backup-directory-alist '((".*" . "~/.emacs-backups")))
