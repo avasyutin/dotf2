@@ -1,34 +1,19 @@
-(require 'package)
 
-(defun ensure-package-installed (&rest packages)
-  "Assure every package is installed, ask for installation if it’s not.
-  Return a list of installed packages or nil for every skipped package."
-  (mapcar
-   (lambda (package)
-     (if (package-installed-p package)
-         nil
-       (if (y-or-n-p (format "Package %s is missing. Install it? " package))
-           (package-install package)
-         package)))
-   packages))
-
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/"))
-
-(or (file-exists-p package-user-dir)
-    (package-refresh-contents))
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
 (package-initialize)
 
-(ensure-package-installed 'evil
-                          'evil-leader
-			  'flx-ido
-			  'projectile
-			  'moe-theme
-			  'powerline
-			  'use-package)
+(require 'package)
 
-;; Changes all yes/no questions to y/n type
-(fset 'yes-or-no-p 'y-or-n-p)
+(defvar settings-dir
+  (expand-file-name "settings" user-emacs-directory))
+(add-to-list 'load-path settings-dir)
+
+(require 'my-defuns)
+(require 'my-deps)
+(require 'my-settings)
 
 ;; Projectile
 (use-package projectile
@@ -90,12 +75,6 @@
     (setq-default save-place t))
   :config
   (save-place-mode 1))
-
-;; Backup file settings
-
-
-;; Stop littering everywhere with save files, put them somewhere
-;; (setq backup-directory-alist '((".*" . "~/.emacs-backups")))
 
 ;; Tabs are evil
 (use-package indent-tabs
