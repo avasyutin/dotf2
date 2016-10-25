@@ -27,15 +27,31 @@
 			  'powerline
 			  'use-package)
 
+;; Projectile
+(projectile-global-mode)
+(setq projectile-switch-project-action 'projectile-dired)
+
 ;; Evil mode settings
-(evil-mode 1)
-(global-evil-leader-mode)
-(evil-leader/set-leader ",")
-(evil-leader/set-key "b" 'evil-switch-to-windows-last-buffer)
-(evil-leader/set-key "p" (lambda () (interactive) (dired ".")))
+(use-package evil
+  :init
+  (progn
+    (use-package evil-leader
+      :init
+      (global-evil-leader-mode)
+      :config
+      (progn
+	(evil-leader/set-leader ",")
+	(evil-leader/set-key
+          "," 'projectile-find-file
+	  "." 'projectile-switch-to-buffer
+	  "b" 'evil-switch-to-windows-last-buffer
+	  "p" (lambda () (interactive) (dired ".")))))
+    (evil-mode 1)))
 
 ;; display line numbers
-(global-linum-mode 1)
+(use-package linum
+  :init
+  (global-linum-mode 1))
 
 ;; IDO
 (ido-mode 1)
@@ -44,12 +60,6 @@
 ;; disable ido faces to see flx highlights.
 (setq ido-enable-flex-matching t)
 (setq ido-use-faces nil)
-
-;; Projectile
-(projectile-global-mode)
-(setq projectile-switch-project-action 'projectile-dired)
-(evil-leader/set-key "," 'projectile-find-file)
-(evil-leader/set-key "." 'projectile-switch-to-buffer)
 
 ;; UI
 (require 'moe-theme)
