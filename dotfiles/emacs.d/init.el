@@ -39,6 +39,11 @@
   :config
   (evil-mode 1))
 
+;; Hide menu bar
+(use-package menu-bar
+  :config
+  (menu-bar-mode -1))
+
 ;; display line numbers
 (use-package linum
   :config

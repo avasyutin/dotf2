@@ -4,6 +4,7 @@
              '("melpa" . "https://melpa.org/packages/"))
 (or (file-exists-p package-user-dir)
     (package-refresh-contents))
+
 (package-initialize)
 
 (ensure-package-installed 'evil
