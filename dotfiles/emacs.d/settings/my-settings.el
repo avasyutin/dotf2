@@ -8,5 +8,12 @@
 ;; (setq backup-directory-alist '((".*" . "~/.emacs-backups")))
 
 ;; Clipboard support
-(setq interprogram-cut-function 'paste-to-osx)
-(setq interprogram-paste-function 'copy-from-osx)
+(if (osx?)
+  (progn
+    (setq interprogram-cut-function 'paste-to-osx)
+    (setq interprogram-paste-function 'copy-from-osx)))
+
+(if (linux?)
+  (use-package xclip
+    :config
+    (xclip-mode 1)))

@@ -5,12 +5,11 @@
 (or (file-exists-p package-user-dir)
     (package-refresh-contents))
 
-(package-initialize)
-
 (ensure-package-installed 'evil
                           'evil-leader
-			  'flx-ido
-			  'projectile
-			  'moe-theme
-			  'powerline
-			  'use-package)
+                          'flx-ido
+                          'projectile
+                          'moe-theme
+                          'powerline
+                          'use-package
+                          'xclip)

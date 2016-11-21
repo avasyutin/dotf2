@@ -1,16 +1,10 @@
-
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
 (package-initialize)
-
-(require 'package)
 
 (defvar settings-dir
   (expand-file-name "settings" user-emacs-directory))
 (add-to-list 'load-path settings-dir)
 
+(require 'package)
 (require 'my-defuns)
 (require 'my-deps)
 (require 'my-settings)
