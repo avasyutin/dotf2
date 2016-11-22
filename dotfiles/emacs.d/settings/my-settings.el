@@ -5,13 +5,30 @@
 
 ;; Backup file settings
 ;; Stop littering everywhere with save files, put them somewhere
-;; (setq backup-directory-alist '((".*" . "~/.emacs-backups")))
+(let ((backup-directory (expand-file-name "backup" user-emacs-directory)))
+  (setq
+   backup-by-copying t
+   version-control t
+   kept-new-versions 5
+   kept-old-versions 2
+   delete-old-versions t
+   backup-directory-alist (list (cons ".*" backup-directory))))
+
+;; Save cursor position
+(use-package saveplace
+  :init
+  (progn
+    (setq save-place-file (expand-file-name "saveplace" user-emacs-directory))
+    (setq-default save-place t))
+  :config
+  (save-place-mode 1))
 
 ;; Clipboard support
 (if (osx?)
   (progn
-    (setq interprogram-cut-function 'paste-to-osx)
-    (setq interprogram-paste-function 'copy-from-osx)))
+    (setq
+     interprogram-cut-function 'paste-to-osx
+     interprogram-paste-function 'copy-from-osx)))
 
 (if (linux?)
   (use-package xclip

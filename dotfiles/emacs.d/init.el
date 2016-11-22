@@ -8,6 +8,7 @@
 (require 'my-defuns)
 (require 'my-deps)
 (require 'my-settings)
+(require 'my-appearance)
 
 ;; Projectile
 (use-package projectile
@@ -33,16 +34,6 @@
   :config
   (evil-mode 1))
 
-;; Hide menu bar
-(use-package menu-bar
-  :config
-  (menu-bar-mode -1))
-
-;; display line numbers
-(use-package linum
-  :config
-  (global-linum-mode 1))
-
 ;; IDO
 (use-package ido
   :init
@@ -57,23 +48,6 @@
   (progn
     (ido-mode 1)
     (ido-everywhere 1)))
-
-;; UI
-(use-package moe-theme
-  :config
-  (progn
-    (moe-theme-set-color 'cyan)
-    (powerline-moe-theme)
-    (moe-dark)))
-
-;; Save cursor position
-(use-package saveplace
-  :init
-  (progn
-    (setq save-place-file "~/.emacs.d/saveplace")
-    (setq-default save-place t))
-  :config
-  (save-place-mode 1))
 
 ;; Tabs are evil
 (use-package indent-tabs
