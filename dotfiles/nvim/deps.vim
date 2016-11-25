@@ -21,6 +21,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'zeis/vim-kolor'
+Plug 'tomasr/molokai'
 
 " Git
 Plug 'airblade/vim-gitgutter'

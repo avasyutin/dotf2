@@ -4,7 +4,9 @@ if has('nvim')
   set termguicolors
   color base16-monokai
 else
-  color jellybeans
+  color molokai
+  let g:molokai_original = 1
+  let g:rehash256 = 1
 endif
 
 " Syntax highlighting
