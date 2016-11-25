@@ -4,8 +4,10 @@ if has('nvim')
   " Only for HighColor schemes.
   " set termguicolors
   color molokai
+  let g:airline_theme='molokai'
 else
   color molokai
+  let g:airline_theme='molokai'
 endif
 
 " Syntax highlighting
