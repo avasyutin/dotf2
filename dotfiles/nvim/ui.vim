@@ -1,8 +1,9 @@
 " Colorscheme
 set background=dark
 if has('nvim')
-  set termguicolors
-  color base16-monokai
+  " Only for HighColor schemes.
+  " set termguicolors
+  color molokai
 else
   color molokai
 endif
