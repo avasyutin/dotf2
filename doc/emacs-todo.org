@@ -1,3 +1,0 @@
-* Emacs setup TODO list
-** TODO Autocomplete!!!
-** TODO Syntax highlighting
