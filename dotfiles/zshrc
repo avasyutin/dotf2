@@ -70,6 +70,7 @@ if [[ `uname` != *"Linux"* ]]; then
   export PGDATA=$HOME/pg-data
   export PATH=$PATH:/usr/local/go/bin
   export PATH="/Applications/LibreOffice.app/Contents/MacOS:$PATH"
+  export JAVA_HOME=/usr/lib/jvm/java
 fi
 export DISABLE_SPRING=1
 
@@ -118,7 +119,7 @@ fi
 export PATH="./bin:$PATH"
 
 # Green cursor
-echo -ne '\e]12;lightgreen\a'
+# echo -ne '\e]12;lightgreen\a'
 
 # Install gems in parallel with bundler.
 export BUNDLE_JOBS=4
