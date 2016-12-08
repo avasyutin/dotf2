@@ -1,6 +1,7 @@
 note.txt
 /.bundle
 /vendor/bundle
+/profiler
 *.sublime-*
 dump.rdb
 .DS_Store
