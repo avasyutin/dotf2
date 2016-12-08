@@ -119,7 +119,7 @@ fi
 export PATH="./bin:$PATH"
 
 # Green cursor
-# echo -ne '\e]12;lightgreen\a'
+echo -ne '\e]12;lightgreen\a'
 
 # Install gems in parallel with bundler.
 export BUNDLE_JOBS=4
