@@ -127,3 +127,6 @@ export BUNDLE_JOBS=4
 # Disable cowsay for Ansible
 export ANSIBLE_NOCOWS=1
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
+
+# Theme for using Konsole
+export QT_QPA_PLATFORMTHEME='qt5ct'
