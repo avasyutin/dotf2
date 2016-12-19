@@ -70,8 +70,10 @@ if [[ `uname` != *"Linux"* ]]; then
   export PGDATA=$HOME/pg-data
   export PATH=$PATH:/usr/local/go/bin
   export PATH="/Applications/LibreOffice.app/Contents/MacOS:$PATH"
+else
   export JAVA_HOME=/usr/lib/jvm/java
 fi
+
 export DISABLE_SPRING=1
 
 # You may need to manually set your language environment
