@@ -1,2 +1,2 @@
 ---
-dotfiles_dir: '{{ansible_env.PWD}}/dotfiles'
+dotfiles_dir: '{{ lookup("env", "PWD") }}/dotfiles'

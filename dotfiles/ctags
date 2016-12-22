@@ -1,0 +1,14 @@
+-f .tags
+--recurse=yes
+--exclude=._gems
+--exclude=.bundle
+--exclude=.git
+--exclude=bin/*
+--exclude=coverage/*
+--exclude=db/*
+--exclude=log/*
+--exclude=node_modules/*
+--exclude=profiler/*
+--exclude=tmp/*
+--exclude=spec/*
+--exclude=vendor/bundle/*

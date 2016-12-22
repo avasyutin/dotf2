@@ -6,3 +6,4 @@
     - vim
     - tmux
     - { role: emacs, tags: emacs }
+    - { role: ctags, tags: ctags }
