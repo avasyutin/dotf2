@@ -1,5 +1,6 @@
 -f .tags
 --recurse=yes
+--exclude=._bundle
 --exclude=._gems
 --exclude=.bundle
 --exclude=.git
