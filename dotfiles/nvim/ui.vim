@@ -15,7 +15,7 @@ syntax on
 
 " Show line numbers
 set number
-set rnu
+set nornu
 
 " Whitespaces look and feel
 set listchars=trail:␣,space:⋅,tab:⇨\ ,extends:>,precedes:<

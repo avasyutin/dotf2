@@ -10,6 +10,10 @@ endif
 " Speed up vim
 set ttyfast
 set lazyredraw
+set synmaxcol=128
+set timeoutlen=1000
+set ttimeoutlen=0
+set regexpengine=1
 
 " Don't beep.
 set visualbell
