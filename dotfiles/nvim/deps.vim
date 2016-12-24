@@ -43,7 +43,7 @@ Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'chase/vim-ansible-yaml'
 
 " Autocompletion
-Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+Plug 'ervandew/supertab'
 
 " Snippets
 Plug 'garbas/vim-snipmate'
