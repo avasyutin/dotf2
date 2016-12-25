@@ -34,3 +34,7 @@
   (use-package xclip
     :config
     (xclip-mode 1)))
+
+(use-package company
+  :config
+  (add-hook 'prog-mode-hook 'global-company-mode))

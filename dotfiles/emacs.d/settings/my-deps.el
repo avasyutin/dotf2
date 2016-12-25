@@ -12,4 +12,5 @@
                           'moe-theme
                           'powerline
                           'use-package
-                          'xclip)
+                          'xclip
+                          'company)
