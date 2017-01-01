@@ -7,3 +7,4 @@
     - tmux
     - { role: emacs, tags: emacs }
     - { role: ctags, tags: ctags }
+    - { role: dosbox, tags: dosbox }
