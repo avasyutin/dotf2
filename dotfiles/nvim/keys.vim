@@ -34,3 +34,6 @@ nmap <leader>g :Ag!<CR>
 
 " Quick save and exit!
 nmap <leader>qq :wqa!<CR>
+
+" Convenient moving around frames
+nnoremap <Tab> <C-w><C-w>
