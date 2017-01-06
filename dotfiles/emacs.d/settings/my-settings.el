@@ -35,6 +35,9 @@
     :config
     (xclip-mode 1)))
 
+(let ((project-root (locate-dominating-file default-directory ".git")))
+  (setq tags-file-name (concat project-root ".tags")))
+
 (use-package company
   :config
   (add-hook 'prog-mode-hook 'global-company-mode))
