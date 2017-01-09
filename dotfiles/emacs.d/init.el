@@ -24,13 +24,17 @@
     (use-package evil-leader
       :config
       (progn
-	(evil-leader/set-leader ",")
-	(evil-leader/set-key
+        (evil-leader/set-leader ",")
+        (evil-leader/set-key
+          "ci" 'evilnc-comment-or-uncomment-lines
           "," 'projectile-find-file
-	  "." 'projectile-switch-to-buffer
-	  "b" 'evil-switch-to-windows-last-buffer
-	  "p" (lambda () (interactive) (dired "."))))
-      	(global-evil-leader-mode)))
+          "." 'projectile-switch-to-buffer
+          "b" 'evil-switch-to-windows-last-buffer
+          "p" (lambda () (interactive) (dired "."))))
+        (global-evil-leader-mode))
+    (use-package evil-nerd-commenter
+      :config
+      (evilnc-default-hotkeys)))
   :config
   (evil-mode 1))
 
