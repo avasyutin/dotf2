@@ -39,5 +39,8 @@
   (setq tags-file-name (concat project-root ".tags")))
 
 (use-package company
+  :init
+  (setq
+   company-idle-delay 0.5)
   :config
   (add-hook 'prog-mode-hook 'global-company-mode))
