@@ -41,6 +41,6 @@
 (use-package company
   :init
   (setq
-   company-idle-delay 0.5)
+   company-idle-delay 0.3)
   :config
   (add-hook 'prog-mode-hook 'global-company-mode))
