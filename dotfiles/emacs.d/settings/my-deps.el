@@ -12,7 +12,9 @@
                           'flx-ido
                           'projectile
                           'moe-theme
+                          'monokai-theme
                           'powerline
                           'use-package
                           'xclip
-                          'company)
+                          'company
+                          'git-gutter)
