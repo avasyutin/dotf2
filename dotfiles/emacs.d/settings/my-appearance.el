@@ -1,7 +1,5 @@
 (provide 'my-appearance)
 
-(require 'powerline)
-
 ;; Hide menu bar.
 (use-package menu-bar
   :config
@@ -12,22 +10,12 @@
   :config
   (global-linum-mode 1))
 
-;; (use-package moe-theme
-;;   :config
-;;   (progn
-;;     (moe-theme-set-color 'cyan)
-;;     (powerline-moe-theme)
-;;     (moe-dark)))
-
-(use-package monokai-theme
-  :init
-  (use-package powerline
-    :init
-    (setq ns-use-srgb-colorspace nil)
-    :config
-    (powerline-default-theme))
+(use-package moe-theme
   :config
-  (load-theme 'monokai t))
+  (progn
+    (moe-theme-set-color 'cyan)
+    (powerline-moe-theme)
+    (moe-dark)))
 
 (use-package git-gutter
   :init

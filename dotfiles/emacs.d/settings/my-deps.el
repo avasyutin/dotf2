@@ -12,7 +12,6 @@
                           'flx-ido
                           'projectile
                           'moe-theme
-                          'monokai-theme
                           'powerline
                           'use-package
                           'xclip
