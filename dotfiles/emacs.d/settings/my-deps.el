@@ -16,4 +16,5 @@
                           'use-package
                           'xclip
                           'company
-                          'git-gutter)
+                          'git-gutter
+                          'yaml-mode)
