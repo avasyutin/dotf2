@@ -17,4 +17,5 @@
                           'xclip
                           'company
                           'git-gutter
-                          'yaml-mode)
+                          'yaml-mode
+                          'enh-ruby-mode)
