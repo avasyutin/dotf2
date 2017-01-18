@@ -44,3 +44,5 @@
    company-idle-delay 0.3)
   :config
   (add-hook 'prog-mode-hook 'global-company-mode))
+
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
