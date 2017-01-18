@@ -9,6 +9,7 @@
 (require 'my-deps)
 (require 'my-settings)
 (require 'my-appearance)
+(require 'my-filetypes)
 
 ;; Projectile
 (use-package projectile
