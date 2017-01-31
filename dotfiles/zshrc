@@ -132,3 +132,5 @@ export VAGRANT_DEFAULT_PROVIDER=virtualbox
 
 # Theme for using Konsole
 export QT_QPA_PLATFORMTHEME='qt5ct'
+
+export SKIP_SIMPLECOV=1
