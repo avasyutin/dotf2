@@ -118,7 +118,7 @@ else
 fi
 
 # Loading files like rake, rails from ./bin. It should be after rbenv/rvm initialization.
-export PATH="./bin:$PATH"
+export PATH="/bin:/usr/bin:./bin:$PATH"
 
 # Green cursor
 echo -ne '\e]12;lightgreen\a'
