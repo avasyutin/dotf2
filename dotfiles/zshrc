@@ -109,6 +109,9 @@ alias tnew='tmux new -s'
 alias tls='tmux ls'
 alias tkill='tmux kill-session -t'
 
+# Loading files like rake, rails from ./bin. It should be after rbenv/rvm initialization.
+export PATH="./bin:$PATH"
+
 # Check rbenv or rvm and init corresponding manager.
 if [ -d ~/.rbenv ]; then
   export PATH="$HOME/.rbenv/bin:$PATH"
@@ -116,9 +119,6 @@ if [ -d ~/.rbenv ]; then
 else
   export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 fi
-
-# Loading files like rake, rails from ./bin. It should be after rbenv/rvm initialization.
-export PATH="/bin:/usr/bin:./bin:$PATH"
 
 # Green cursor
 echo -ne '\e]12;lightgreen\a'
