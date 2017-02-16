@@ -18,4 +18,5 @@
                           'company
                           'git-gutter
                           'yaml-mode
-                          'enh-ruby-mode)
+                          'enh-ruby-mode
+                          'markdown-mode)

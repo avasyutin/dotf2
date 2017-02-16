@@ -1,5 +1,8 @@
 (provide 'my-appearance)
 
+;; Disable word wrap.
+(setq-default truncate-lines 1)
+
 ;; Hide menu bar.
 (use-package menu-bar
   :config
