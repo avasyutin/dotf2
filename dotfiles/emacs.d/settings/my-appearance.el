@@ -8,6 +8,11 @@
   :config
   (menu-bar-mode -1))
 
+;; Hide tool bar.
+(use-package tool-bar
+  :config
+  (tool-bar-mode -1))
+
 ;; display line numbers
 (use-package linum
   :config
