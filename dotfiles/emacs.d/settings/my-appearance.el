@@ -1,6 +1,6 @@
 (provide 'my-appearance)
 
-(add-to-list 'initial-frame-alist '(font . "Fira Code"))
+(add-to-list 'initial-frame-alist '(font . "Fira Code-9"))
 
 ;; Disable word wrap.
 (setq-default truncate-lines 1)
