@@ -1,5 +1,8 @@
 (provide 'my-appearance)
 
+;; Disable Annoying Audio Notifications.
+(setq ring-bell-function 'ignore)
+
 (add-to-list 'initial-frame-alist '(font . "Fira Code-9"))
 
 ;; Disable word wrap.
