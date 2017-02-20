@@ -3,7 +3,11 @@
 ;; Disable Annoying Audio Notifications.
 (setq ring-bell-function 'ignore)
 
-(add-to-list 'initial-frame-alist '(font . "Fira Code-9"))
+(if (osx?)
+  (add-to-list 'initial-frame-alist '(font . "Fira Code-12")))
+
+(if (linux?)
+  (add-to-list 'initial-frame-alist '(font . "Fira Code-9")))
 
 ;; Disable word wrap.
 (setq-default truncate-lines 1)
