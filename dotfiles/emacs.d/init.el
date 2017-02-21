@@ -33,7 +33,7 @@
       (progn
         (evil-leader/set-leader ",")
         (evil-leader/set-key
-          "g" 'projectile-ag
+          "g" (lambda () (interactive) (projectile-ag (thing-at-point 'symbol)))
           "ci" 'evilnc-comment-or-uncomment-lines
           "," 'projectile-find-file
           "." 'projectile-switch-to-buffer
