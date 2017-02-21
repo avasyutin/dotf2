@@ -19,4 +19,6 @@
                           'git-gutter
                           'yaml-mode
                           'enh-ruby-mode
-                          'markdown-mode)
+                          'markdown-mode
+                          'ag
+                          'exec-path-from-shell)

@@ -11,6 +11,12 @@
 (require 'my-appearance)
 (require 'my-filetypes)
 
+;; Fix environment variables in GUI Emacs.
+(use-package exec-path-from-shell
+  :config
+  (when (memq window-system '(mac ns))
+    (exec-path-from-shell-initialize)))
+
 ;; Projectile
 (use-package projectile
   :init
@@ -27,6 +33,7 @@
       (progn
         (evil-leader/set-leader ",")
         (evil-leader/set-key
+          "g" 'projectile-ag
           "ci" 'evilnc-comment-or-uncomment-lines
           "," 'projectile-find-file
           "." 'projectile-switch-to-buffer
@@ -64,6 +71,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(git-gutter:modified-sign "~")
  '(package-selected-packages (quote (evil-leader evil))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

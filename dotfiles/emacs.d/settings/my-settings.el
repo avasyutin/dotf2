@@ -38,6 +38,13 @@
 (let ((project-root (locate-dominating-file default-directory ".git")))
   (setq tags-file-name (concat project-root ".tags")))
 
+;; Some settings for silver-searcher integration.
+(use-package ag
+  :init
+  (setq
+   ag-highlight-search t
+   ag-reuse-window t))
+
 (use-package company
   :init
   (setq
