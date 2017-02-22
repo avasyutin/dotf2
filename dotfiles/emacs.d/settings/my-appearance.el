@@ -4,7 +4,7 @@
 (setq ring-bell-function 'ignore)
 
 (if (osx?)
-  (add-to-list 'initial-frame-alist '(font . "Fira Code-12")))
+  (add-to-list 'initial-frame-alist '(font . "Fira Mono-12")))
 
 (if (linux?)
   (add-to-list 'initial-frame-alist '(font . "Fira Code-9")))
