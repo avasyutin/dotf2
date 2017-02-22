@@ -7,7 +7,7 @@
   (add-to-list 'initial-frame-alist '(font . "Fira Mono-12")))
 
 (if (linux?)
-  (add-to-list 'initial-frame-alist '(font . "Fira Code-9")))
+  (add-to-list 'initial-frame-alist '(font . "Fira Mono-9")))
 
 ;; Disable word wrap.
 (setq-default truncate-lines 1)
