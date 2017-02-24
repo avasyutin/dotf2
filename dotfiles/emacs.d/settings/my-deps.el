@@ -21,4 +21,5 @@
                           'enh-ruby-mode
                           'markdown-mode
                           'ag
-                          'exec-path-from-shell)
+                          'exec-path-from-shell
+                          'magit)
