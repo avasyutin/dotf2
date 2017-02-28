@@ -22,4 +22,5 @@
                           'markdown-mode
                           'ag
                           'exec-path-from-shell
-                          'magit)
+                          'magit
+                          'scala-mode)
