@@ -23,4 +23,5 @@
                           'ag
                           'exec-path-from-shell
                           'magit
-                          'scala-mode)
+                          'scala-mode
+                          'python-mode)
