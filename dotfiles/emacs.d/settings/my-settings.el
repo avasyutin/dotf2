@@ -53,3 +53,6 @@
   (add-hook 'prog-mode-hook 'global-company-mode))
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+;; Automatic parens pairing (Electric Pair mode).
+(electric-pair-mode 1)
