@@ -27,3 +27,4 @@ autocmd Filetype javascript   setlocal ts=4 sw=4 expandtab colorcolumn=110
 autocmd Filetype coffee       setlocal ts=2 sw=2 expandtab colorcolumn=110
 autocmd Filetype crystal      setlocal ts=2 sw=2 expandtab colorcolumn=110
 autocmd Filetype cucumber     setlocal ts=2 sw=2 expandtab colorcolumn=110
+autocmd Filetype cpp          setlocal ts=4 sw=4 expandtab colorcolumn=110
