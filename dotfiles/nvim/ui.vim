@@ -2,6 +2,11 @@
 set background=dark
 
 if has('gui_running')
+  set guioptions-=m  "remove menu bar
+  set guioptions-=T  "remove toolbar
+  set guioptions-=r  "remove right-hand scroll bar
+  set guioptions-=L  "remove left-hand scroll bar
+
   colorscheme pencil
   let g:pencil_higher_contrast_ui = 1
   let g:airline_theme = 'pencil'
@@ -9,7 +14,8 @@ if has('gui_running')
   let g:pencil_gutter_color = 1
   set t_md=
   set background=dark
-  set guifont=Fira\ Code\ Retina:h12
+
+  set guifont=Fira\ Code\ Retina\ 9
 else
   " Only for HighColor schemes.
   " set termguicolors
