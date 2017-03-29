@@ -22,7 +22,7 @@ Plug 'nanotech/jellybeans.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'zeis/vim-kolor'
 Plug 'flazz/vim-colorschemes'
-
+Plug 'reedes/vim-colors-pencil'
 " Git
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'

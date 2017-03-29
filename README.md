@@ -1,10 +1,10 @@
 # Dotf2
 
-## Neovim
+## Plugins
 
-After neovim was installed run it and execute:
+After vim was installed run it and execute:
 
-1. :PlugInstall (and restart Neovim).
+1. :PlugInstall (and restart vim).
 
 ## Pass variables to the playbook from command line
 
