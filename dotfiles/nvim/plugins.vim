@@ -10,7 +10,7 @@ let g:airline_enable_fugitive=1
 " CtrlP settings
 if executable('ag')
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l -i -U --nocolor --nogroup
+  let g:ctrlp_user_command = 'ag %s -l -i -U --nocolor --nogroup --hidden
     \ --ignore="bin/"
     \ --ignore="*.gif"
     \ --ignore="*.png"
@@ -19,6 +19,8 @@ if executable('ag')
     \ --ignore="vendor/bundle"
     \ --ignore="tmp/"
     \ --ignore="coverage/"
+    \ --ignore=".git/"
+    \ --ignore=".DS_Store/"
     \ -g ""'
 
   let g:ctrlp_use_caching = 1
@@ -28,6 +30,7 @@ if executable('ag')
 endif
 
 " NERDTree settings
+let NERDTreeShowHidden = 1
 let NERDTreeIgnore=['\~$', '^coverage$', '^log$', '^tmp$', '\.tags$', 'tags.lock$', '^\.git$', '\.swp$', '^\.svn', '^\.DS_Store$']
 let g:NERDTreeIndicatorMapCustom = {
   \ "Modified"  : "~",
