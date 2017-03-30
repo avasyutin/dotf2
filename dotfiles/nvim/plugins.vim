@@ -20,6 +20,7 @@ if executable('ag')
     \ --ignore="tmp/"
     \ --ignore="coverage/"
     \ --ignore=".git/"
+    \ --ignore="._gems/"
     \ --ignore=".DS_Store/"
     \ -g ""'
 
