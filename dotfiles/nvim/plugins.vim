@@ -21,6 +21,7 @@ if executable('ag')
     \ --ignore="coverage/"
     \ --ignore=".git/"
     \ --ignore="._gems/"
+    \ --ignore="._bundle/"
     \ --ignore=".DS_Store/"
     \ -g ""'
 
