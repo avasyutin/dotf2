@@ -7,6 +7,7 @@ else
 endif
 
 source $VIMHOME/deps.vim
+source $VIMHOME/functions.vim
 source $VIMHOME/general.vim
 source $VIMHOME/ui.vim
 source $VIMHOME/plugins.vim

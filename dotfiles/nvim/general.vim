@@ -42,21 +42,13 @@ set clipboard+=unnamedplus
 " set iskeyword-=_
 
 " Strip trailing spaces before save.
-function! <SID>StripTrailingWhitespaces()
-  " Preparation: save last search, and cursor position.
-  let _s=@/
-  let l = line(".")
-  let c = col(".")
-  " Do the business:
-  %s/\s\+$//e
-  " Clean up: restore previous search history, and cursor position
-  let @/=_s
-  call cursor(l, c)
-endfunction
-autocmd BufWritePre *.* :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.* :call StripTrailingWhitespaces()
 
 " Remove blank lines at end of file
 autocmd FileType * autocmd BufWritePre <buffer> :%s/\($\n\s*\)\+\%$//e
 
 " Blank line at end of file.
 set eol
+
+" Generate .tags file for ruby/rails projects.
+command RipperTagsGen call RipperTagsGen()
