@@ -1,8 +1,3 @@
-" Indent line
-let g:indentLine_char='¦'
-let g:indentLine_fileType=['ruby', 'vim', 'coffee', 'javascript', 'css', 'scss', 'html', 'slim']
-let g:indentLine_enabled=0
-
 " Airline
 let g:airline_powerline_fonts=1
 let g:airline_enable_fugitive=1

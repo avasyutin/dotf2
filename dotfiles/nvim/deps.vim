@@ -17,10 +17,6 @@ Plug 'editorconfig/editorconfig-vim'
 " UI
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'chriskempson/base16-vim'
-Plug 'nanotech/jellybeans.vim'
-Plug 'Yggdroot/indentLine'
-Plug 'zeis/vim-kolor'
 Plug 'flazz/vim-colorschemes'
 Plug 'reedes/vim-colors-pencil'
 " Git
