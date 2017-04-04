@@ -78,3 +78,9 @@ let g:SuperTabDefaultCompletionType = '<c-n>' " To prevent navigate the completi
 if executable('ag')
   let g:ag_working_path_mode='r'
 end
+
+" vim-expand-region settings for ruby
+call expand_region#custom_text_objects('ruby', {
+      \ 'im' :0,
+      \ 'am' :0,
+      \ })
