@@ -37,7 +37,7 @@ set autoread
 set tags=./.tags;
 
 " Enable access to clipboard
-set clipboard+=unnamedplus
+set clipboard^=unnamed
 
 " Underscore as word-break (it usefull but breaks syntax highlighting for ruby)
 " set iskeyword-=_
