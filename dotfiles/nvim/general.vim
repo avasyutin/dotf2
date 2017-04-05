@@ -1,5 +1,6 @@
 set hidden
 
+
 set encoding=utf-8
 scriptencoding utf-8
 
@@ -52,3 +53,9 @@ set eol
 
 " Generate .tags file for ruby/rails projects.
 command RipperTagsGen call RipperTagsGen()
+
+" Return to last edit position when opening files (You want this!)
+autocmd BufReadPost *
+     \ if line("'\"") > 0 && line("'\"") <= line("$") |
+     \   exe "normal! g`\"" |
+     \ endif
