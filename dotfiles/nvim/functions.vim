@@ -13,3 +13,11 @@ endfunction
 function RipperTagsGen()
   execute "silent !ripper-tags -R --exclude=vendor --exclude=._gems --exclude=._bundle -f .tags"
 endfunction
+
+function RnuToggle()
+  if(&relativenumber == 1)
+    set nornu
+  else
+    set rnu
+  endif
+endfunc

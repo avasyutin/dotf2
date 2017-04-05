@@ -15,18 +15,7 @@ nnoremap <leader>. :CtrlPBuffer<CR>
 nmap <leader>p :NERDTreeFind<CR>
 nnoremap <leader>n :NERDTreeToggle<CR>
 
-" Cleanup search highlight
-map <Esc><Esc> :noh<CR>
-
 " Switch between nu/rnu
-function! RnuToggle()
-  if(&relativenumber == 1)
-    set nornu
-  else
-    set rnu
-  endif
-endfunc
-
 nnoremap <leader>rr :call RnuToggle()<CR>
 
 " Quick ag search
