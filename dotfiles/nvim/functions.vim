@@ -10,8 +10,22 @@ function StripTrailingWhitespaces()
   call cursor(l, c)
 endfunction
 
+function RipperTagsGenResultMessage(_job, status)
+  if (a:status == 0)
+    echo "ripper-tags: OK"
+  else
+    echo "ripper-tags: failed with status " . a:status
+  endif
+endfunction
+
 function RipperTagsGen()
-  execute "silent !ripper-tags -R --exclude=vendor --exclude=._gems --exclude=._bundle -f .tags"
+  let l:cmd = 'ripper-tags -R --exclude=vendor --exclude=._gems --exclude=._bundle -f .tags'
+
+  if has('nvim')
+    execute "silent !" . l:cmd
+  else
+    call job_start(l:cmd, { "exit_cb": "RipperTagsGenResultMessage" })
+  endif
 endfunction
 
 function RnuToggle()
