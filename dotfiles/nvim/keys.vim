@@ -10,6 +10,7 @@ nnoremap <leader>b <C-^>
 " CtrlP keybindings
 nnoremap <leader>, :CtrlP<CR>
 nnoremap <leader>. :CtrlPBuffer<CR>
+nnoremap <leader>r :CtrlPBufTag<CR>
 
 " NERDTree keybindings
 nmap <leader>p :NERDTreeFind<CR>
