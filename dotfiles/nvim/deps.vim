@@ -47,6 +47,6 @@ Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 
 " Searching
-Plug 'rking/ag.vim'
+Plug 'mileszs/ack.vim'
 
 call plug#end()

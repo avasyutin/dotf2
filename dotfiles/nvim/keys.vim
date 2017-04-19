@@ -20,7 +20,7 @@ nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>rr :call RnuToggle()<CR>
 
 " Quick ag search
-nmap <leader>g :Ag!<CR>
+nmap <leader>g :Ack -Q <cword><CR>
 
 " Quick save and exit!
 nmap <leader>qq :wqa!<CR>
