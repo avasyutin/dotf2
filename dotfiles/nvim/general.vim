@@ -1,6 +1,5 @@
 set hidden
 
-
 set encoding=utf-8
 scriptencoding utf-8
 
@@ -37,7 +36,7 @@ set autoread
 set tags=./.tags;
 
 " Enable access to clipboard
-set clipboard^=unnamed
+set clipboard^=unnamed,unnamedplus
 
 " Underscore as word-break (it usefull but breaks syntax highlighting for ruby)
 " set iskeyword-=_

@@ -35,3 +35,7 @@ function RnuToggle()
     set rnu
   endif
 endfunc
+
+function IsLinux()
+  return system("uname -s") == 'Linux'
+endfunction
