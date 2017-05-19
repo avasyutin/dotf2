@@ -27,3 +27,6 @@ nmap <leader>qq :wqa!<CR>
 
 " Convenient moving around frames
 nnoremap <Tab> <C-w><C-w>
+
+" Taglist keys
+nnoremap <leader>t :TlistToggle<CR>
