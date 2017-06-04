@@ -91,3 +91,6 @@ let g:Tlist_Use_Right_Window = 1
 let g:Tlist_WinWidth = 45
 let g:Tlist_GainFocus_On_ToggleOpen = 1
 let g:Tlist_Close_On_Select = 1
+
+" Ansible.vim
+let g:ansible_extra_syntaxes = "ruby.vim nginx.vim"
