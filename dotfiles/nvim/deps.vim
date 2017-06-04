@@ -39,6 +39,7 @@ Plug 'slim-template/vim-slim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'chase/vim-ansible-yaml'
+Plug 'pearofducks/ansible-vim'
 
 " Autocompletion
 Plug 'ervandew/supertab'
