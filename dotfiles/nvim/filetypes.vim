@@ -28,7 +28,6 @@ autocmd Filetype coffee           setlocal ts=2 sw=2 expandtab colorcolumn=110
 autocmd Filetype crystal          setlocal ts=2 sw=2 expandtab colorcolumn=110
 autocmd Filetype cucumber         setlocal ts=2 sw=2 expandtab colorcolumn=110
 autocmd Filetype cpp              setlocal ts=4 sw=4 expandtab colorcolumn=110
-autocmd Filetype ansible_template setlocal expandtab
 
 autocmd BufNewFile,BufRead *.rb.j2 setlocal ts=2 sw=2
 autocmd BufNewFile,BufRead *.conf.j2 setlocal ts=4 sw=4

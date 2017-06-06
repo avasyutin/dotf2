@@ -38,9 +38,6 @@ Plug 'tpope/vim-bundler', { 'for': 'ruby' }
 Plug 'slim-template/vim-slim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
-Plug 'chase/vim-ansible-yaml'
-Plug 'pearofducks/ansible-vim'
-Plug 'vim-scripts/nginx.vim'
 
 " Autocompletion
 Plug 'ervandew/supertab'
