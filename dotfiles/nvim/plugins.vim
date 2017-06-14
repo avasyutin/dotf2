@@ -28,7 +28,7 @@ endif
 
 " NERDTree settings
 let NERDTreeShowHidden = 1
-let NERDTreeIgnore=['\~$', '^coverage$', '^log$', '^tmp$', '\.tags$', 'tags.lock$', '^\.git$', '\.swp$', '^\.svn', '^\.DS_Store$']
+let NERDTreeIgnore=['\~$', '^coverage$', '^log$', '\.tags$', 'tags.lock$', '^\.git$', '\.swp$', '^\.svn', '^\.DS_Store$']
 let g:NERDTreeIndicatorMapCustom = {
   \ "Modified"  : "~",
   \ "Staged"    : "+",
