@@ -44,7 +44,7 @@
       :config
       (evilnc-default-hotkeys)))
   :config
-  (evil-mode 1))
+  (evil-mode 0))
 
 ;; IDO
 (use-package ido
