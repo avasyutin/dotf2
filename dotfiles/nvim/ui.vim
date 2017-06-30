@@ -1,12 +1,14 @@
-" Colorscheme
-set background=dark
+" Syntax highlighting
+syntax on
 
+" Colorscheme
 if has('gui_running')
   set guioptions-=m  "remove menu bar
   set guioptions-=T  "remove toolbar
   set guioptions-=r  "remove right-hand scroll bar
   set guioptions-=L  "remove left-hand scroll bar
 
+  set background=dark
   color molokai
   let g:airline_theme='molokai'
   set guifont=Fira\ Code\ Retina\ 9
@@ -15,10 +17,9 @@ else
   " set termguicolors
   color molokai
   let g:airline_theme='molokai'
+  " Color column (position depends on file types)
+  hi ColorColumn ctermbg=234, guibg=#333333
 endif
-
-" Syntax highlighting
-syntax on
 
 " Show line numbers
 set number
@@ -29,8 +30,6 @@ set listchars=trail:␣,space:⋅,tab:⇨\ ,extends:>,precedes:<
 hi specialkey ctermfg=238, guifg=#4d4d4d
 hi nontext ctermfg=238, guifg=#4d4d4d
 
-" Color column (position depends on file types)
-hi ColorColumn ctermbg=234, guibg=#333333
 
 " Search settings.
 set showmatch
