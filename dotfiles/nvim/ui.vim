@@ -7,14 +7,6 @@ if has('gui_running')
   set guioptions-=r  "remove right-hand scroll bar
   set guioptions-=L  "remove left-hand scroll bar
 
-  " colorscheme pencil
-  " let g:pencil_higher_contrast_ui = 1
-  " let g:airline_theme = 'pencil'
-  " let g:pencil_spell_undercurl = 1
-  " let g:pencil_gutter_color = 1
-  " set t_md=
-  " set background=dark
-
   color molokai
   let g:airline_theme='molokai'
   set guifont=Fira\ Code\ Retina\ 9
