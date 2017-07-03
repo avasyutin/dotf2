@@ -21,3 +21,11 @@
 --exclude=tmp/*
 --exclude=spec/*
 --exclude=vendor/bundle/*
+--exclude=tags
+--exclude=.git
+--exclude=*.class
+--exclude=*.json
+--exclude=*.pdb
+--exclude=*.pyc
+--exclude=*.swp
+--exclude=*.gz
