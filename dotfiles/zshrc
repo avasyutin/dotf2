@@ -107,9 +107,3 @@ export ANSIBLE_NOCOWS=1
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
 # Theme for using Konsole
 export SKIP_SIMPLECOV=1
-
-# Add some host-specific configuration here. For instance if you need to export
-# different environment variables on home/work laptops put it here.
-if [ -e ~/.zshrc-custom ]; then
-  source ~/.zshrc-custom
-fi

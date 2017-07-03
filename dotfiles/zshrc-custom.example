@@ -1,3 +1,4 @@
+# Put this file into $ZSH_CUSTOM directory for autoloading.
 export JAVA_HOME=/usr/lib/jvm/java
 export QT_QPA_PLATFORMTHEME='qt5ct'
 
