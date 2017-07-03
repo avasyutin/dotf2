@@ -20,7 +20,8 @@ ZSH_THEME="gallois"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+# Fix tmuxinator window titles.
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -49,7 +50,13 @@ ZSH_THEME="gallois"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx terminalapp brew copydir copyfile gem rake-fast rails bundler rvm rbenv)
+
+# Plugins
+if [[ `uname` != *"Linux"* ]]; then
+  plugins=(git copydir copyfile gem rake-fast rails bundler rbenv)
+else
+  plugins=(git osx terminalapp brew copydir copyfile gem rake-fast rails bundler rvm rbenv)
+fi
 
 source $ZSH/oh-my-zsh.sh
 
@@ -57,37 +64,13 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/bin:$PATH"
 export PATH="/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 export PATH="./node_modules/.bin:$PATH"
-
-# Settings for golang
-if [ -d $HOME/opt/go ]; then
-  export GOROOT=$HOME/opt/go
-  export GOPATH=$HOME/work/gocode
-  export LGOBIN=$GOPATH/bin
-  export PATH=$GOROOT/bin:$LGOBIN:$PATH
-fi
-
-if [[ `uname` != *"Linux"* ]]; then
-  export PGDATA=$HOME/pg-data
-  export PATH=$PATH:/usr/local/go/bin
-  export PATH="/Applications/LibreOffice.app/Contents/MacOS:$PATH"
-else
-  export JAVA_HOME=/usr/lib/jvm/java
-fi
-
-export DISABLE_SPRING=1
+export PATH="./bin:$PATH"
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 
-# export NVIM_TUI_ENABLE_TRUE_COLOR=1
-
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='nvim'
-fi
+export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -96,11 +79,8 @@ fi
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # Aliases
-# alias nvim="NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
 alias zshconfig="$EDITOR ~/.zshrc"
-alias nvimconf="$EDITOR ~/.config/nvim/init.vim"
 alias subl="subl -n"
-alias nau='nautilus . &'
 
 # Aliases for Tmux
 alias tmux='tmux -2'
@@ -108,9 +88,6 @@ alias ta='tmux attach -t'
 alias tnew='tmux new -s'
 alias tls='tmux ls'
 alias tkill='tmux kill-session -t'
-
-# Loading files like rake, rails from ./bin. It should be after rbenv/rvm initialization.
-export PATH="./bin:$PATH"
 
 # Check rbenv or rvm and init corresponding manager.
 if [ -d ~/.rbenv ]; then
@@ -123,17 +100,16 @@ fi
 # Green cursor
 echo -ne '\e]12;lightgreen\a'
 
-# Install gems in parallel with bundler.
 export BUNDLE_JOBS=4
-
+export DISABLE_SPRING=1
 # Disable cowsay for Ansible
 export ANSIBLE_NOCOWS=1
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
-
 # Theme for using Konsole
-export QT_QPA_PLATFORMTHEME='qt5ct'
-
 export SKIP_SIMPLECOV=1
 
-# Fix tmuxinator window titles
-export DISABLE_AUTO_TITLE=true
+# Add some host-specific configuration here. For instance if you need to export
+# different environment variables on home/work laptops put it here.
+if [ -e ~/.zshrc-custom ]; then
+  source ~/.zshrc-custom
+fi
