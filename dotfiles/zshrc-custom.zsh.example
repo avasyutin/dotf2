@@ -2,7 +2,8 @@
 export JAVA_HOME=/usr/lib/jvm/java
 export QT_QPA_PLATFORMTHEME='qt5ct'
 
-export GOPATH=/Users/vasyale/work/gospace
-export PATH=$PATH:$GOPATH/bin
+export GOROOT=$HOME/opt/go
+export GOPATH=$HOME/work/gospace
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 alias nau='nautilus . &'
