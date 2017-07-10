@@ -17,9 +17,10 @@ else
   " set termguicolors
   color molokai
   let g:airline_theme='molokai'
-  " Color column (position depends on file types)
-  hi ColorColumn ctermbg=234, guibg=#333333
 endif
+
+" Color column (position depends on file types)
+hi ColorColumn ctermbg=234, guibg=#333333
 
 " Show line numbers
 set number
