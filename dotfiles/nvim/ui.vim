@@ -43,3 +43,5 @@ set wildmenu
 
 " Don't wrap lines.
 set nowrap
+
+set novisualbell
