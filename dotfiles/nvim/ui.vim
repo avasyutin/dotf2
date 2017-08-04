@@ -12,6 +12,8 @@ if has('gui_running')
   color molokai
   let g:airline_theme='molokai'
   set guifont=Fira\ Code\ Retina\ 9
+" elseif IsMac()
+"   color solarized
 else
   " Only for HighColor schemes.
   " set termguicolors

@@ -51,7 +51,10 @@ autocmd FileType * autocmd BufWritePre <buffer> :%s/\($\n\s*\)\+\%$//e
 set eol
 
 " Generate .tags file for ruby/rails projects.
-command RipperTagsGen call RipperTagsGen()
+command! RipperTagsGen call RipperTagsGen()
+
+" Reload VIM config.
+command! ReloadConfig call ReloadConfig()
 
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *

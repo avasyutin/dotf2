@@ -18,7 +18,6 @@ Plug 'terryma/vim-expand-region'
 " UI
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-" Plug 'altercation/vim-colors-solarized'
 
 " Git
 Plug 'airblade/vim-gitgutter'

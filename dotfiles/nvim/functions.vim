@@ -1,4 +1,4 @@
-function StripTrailingWhitespaces()
+function! StripTrailingWhitespaces()
   " Preparation: save last search, and cursor position.
   let _s=@/
   let l = line(".")
@@ -10,7 +10,7 @@ function StripTrailingWhitespaces()
   call cursor(l, c)
 endfunction
 
-function RipperTagsGenResultMessage(_job, status)
+function! RipperTagsGenResultMessage(_job, status)
   if (a:status == 0)
     echo "ripper-tags: OK"
   else
@@ -18,7 +18,7 @@ function RipperTagsGenResultMessage(_job, status)
   endif
 endfunction
 
-function RipperTagsGen()
+function! RipperTagsGen()
   let l:cmd = 'ripper-tags -R --exclude=vendor --exclude=._gems --exclude=._bundle -f .tags'
 
   if has('nvim')
@@ -28,7 +28,7 @@ function RipperTagsGen()
   endif
 endfunction
 
-function RnuToggle()
+function! RnuToggle()
   if(&relativenumber == 1)
     set nornu
   else
@@ -36,6 +36,16 @@ function RnuToggle()
   endif
 endfunc
 
-function IsLinux()
-  return system("uname -s") == 'Linux'
+function! IsLinux()
+  return system("uname -s") =~ 'Linux'
 endfunction
+
+function! IsMac()
+  return system("uname -s") =~ 'Darwin'
+endfunction
+
+if !exists('*ReloadConfig')
+  function ReloadConfig()
+    source $MYVIMRC
+  endfunction
+endif
