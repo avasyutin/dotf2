@@ -16,7 +16,7 @@ set ttimeoutlen=0
 set regexpengine=1
 
 " Don't beep.
-set visualbell
+set novisualbell
 set noerrorbells
 
 " Backup and swap settings
