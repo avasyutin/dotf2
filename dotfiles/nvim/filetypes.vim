@@ -21,6 +21,7 @@ autocmd Filetype json             setlocal ts=2 sw=2 expandtab
 autocmd Filetype slim             setlocal ts=2 sw=2 expandtab
 autocmd Filetype jade             setlocal ts=2 sw=2 expandtab
 autocmd Filetype sass             setlocal ts=2 sw=2 expandtab colorcolumn=110
+autocmd Filetype scss             setlocal ts=2 sw=2 expandtab colorcolumn=110
 autocmd Filetype css              setlocal ts=2 sw=2 expandtab colorcolumn=110
 autocmd Filetype mustache         setlocal ts=2 sw=2 expandtab
 autocmd Filetype javascript       setlocal ts=4 sw=4 expandtab colorcolumn=110
