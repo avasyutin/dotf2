@@ -28,7 +28,6 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 Plug 'mhinz/vim-startify'
-Plug 'vim-scripts/taglist.vim'
 
 " Programming
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
