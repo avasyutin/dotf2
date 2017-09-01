@@ -22,5 +22,4 @@
                           'markdown-mode
                           'ag
                           'exec-path-from-shell
-                          'magit
-                          'smex)
+                          'magit)
