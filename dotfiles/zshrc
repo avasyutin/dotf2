@@ -53,9 +53,9 @@ DISABLE_AUTO_TITLE="true"
 
 # Plugins
 if [[ `uname` != *"Linux"* ]]; then
-  plugins=(git copydir copyfile gem rake-fast rails bundler rbenv)
+  plugins=(git copydir copyfile gem rake-fast rails bundler rbenv docker)
 else
-  plugins=(git osx terminalapp brew copydir copyfile gem rake-fast rails bundler rvm rbenv)
+  plugins=(git osx terminalapp brew copydir copyfile gem rake-fast rails bundler rvm rbenv docker)
 fi
 
 source $ZSH/oh-my-zsh.sh
