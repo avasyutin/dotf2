@@ -9,6 +9,7 @@ Plug 'tpope/vim-sensible'
 Plug 'vim-scripts/L9'
 Plug 'tomtom/tlib_vim'
 Plug 'marcweber/vim-addon-mw-utils'
+Plug 'tmux-plugins/vim-tmux-focus-events'
 
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-endwise'
