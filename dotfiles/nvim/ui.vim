@@ -9,11 +9,9 @@ if has('gui_running')
   set guioptions-=L  "remove left-hand scroll bar
 
   set background=dark
-  color molokai
-  let g:airline_theme='molokai'
-  set guifont=Fira\ Code\ Retina\ 9
-" elseif IsMac()
-"   color solarized
+  color base16-monokai
+  set guifont=Fira\ Code\ Retina:h12
+  set linespace=2
 else
   " Only for HighColor schemes.
   " set termguicolors
