@@ -10,8 +10,13 @@ if has('gui_running')
 
   set background=dark
   color base16-monokai
-  set guifont=Fira\ Code\ Retina:h12
-  set linespace=2
+
+  if IsMac()
+    set guifont=Fira\ Code\ Retina:h12
+    set linespace=2
+  else
+    set guifont=Fira\ Code\ Retina\ 9
+  endif
 else
   " Only for HighColor schemes.
   " set termguicolors
