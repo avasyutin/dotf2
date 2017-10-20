@@ -49,3 +49,9 @@ if !exists('*ReloadConfig')
     source $MYVIMRC
   endfunction
 endif
+
+function! AckFromSelection()
+  normal! ""gvy
+  let selection = shellescape(substitute(getreg('"'), '\n\+$', '', ''))
+  execute 'Ack! -Q ' . selection
+endfunction
