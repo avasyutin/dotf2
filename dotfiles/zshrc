@@ -90,8 +90,10 @@ alias tkill='tmux kill-session -t'
 # Use vimx if exists (because clipboard support)
 if [ -x "$(command -v vimx)" ]; then
   alias vim='vimx'
+  export EDITOR='vimx'
+else
+  export EDITOR='vim'
 fi
-export EDITOR='vim'
 
 # Check rbenv or rvm and init corresponding manager.
 if [ -d ~/.rbenv ]; then
@@ -106,8 +108,6 @@ echo -ne '\e]12;lightgreen\a'
 
 export BUNDLE_JOBS=4
 export DISABLE_SPRING=1
-# Disable cowsay for Ansible
 export ANSIBLE_NOCOWS=1
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
-# Theme for using Konsole
 export SKIP_SIMPLECOV=1
