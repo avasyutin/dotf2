@@ -7,3 +7,4 @@ export GOPATH=$HOME/work/gospace
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 alias nau='nautilus . &'
+export QMAKE=/usr/bin/qmake-qt5
