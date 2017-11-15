@@ -12,7 +12,7 @@ if has('gui_running')
   color base16-monokai
 
   if IsMac()
-    set guifont=Fira\ Code\ Retina:h12
+    set guifont=Fira\ Code\ Light:h12
     set linespace=2
   else
     set guifont=Fira\ Code\ Retina\ 9
