@@ -111,3 +111,7 @@ export DISABLE_SPRING=1
 export ANSIBLE_NOCOWS=1
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
 export SKIP_SIMPLECOV=1
+
+autoload bashcompinit
+bashcompinit
+eval "$(_TMUXP_COMPLETE=source tmuxp)"
