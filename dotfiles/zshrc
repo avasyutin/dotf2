@@ -52,7 +52,7 @@ DISABLE_AUTO_TITLE="true"
 # Add wisely, as too many plugins slow down shell startup.
 
 # Plugins
-if [[ `uname` != *"Linux"* ]]; then
+if [[ `uname` == *"Linux"* ]]; then
   plugins=(git copydir copyfile gem rake-fast rails bundler rbenv docker)
 else
   plugins=(git osx terminalapp brew copydir copyfile gem rake-fast rails bundler rvm rbenv docker)
@@ -112,6 +112,9 @@ export ANSIBLE_NOCOWS=1
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
 export SKIP_SIMPLECOV=1
 
-autoload bashcompinit
-bashcompinit
-eval "$(_TMUXP_COMPLETE=source tmuxp)"
+# tmuxp autocompletion only on Linux
+if [[ `uname` == *"Linux"* ]]; then
+  autoload bashcompinit
+  bashcompinit
+  eval "$(_TMUXP_COMPLETE=source tmuxp)"
+fi
