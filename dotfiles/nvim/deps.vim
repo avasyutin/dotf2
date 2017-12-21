@@ -17,8 +17,8 @@ Plug 'terryma/vim-expand-region'
 Plug 'tpope/vim-surround'
 
 " UI
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
 Plug 'chriskempson/base16-vim'
 
 " Git

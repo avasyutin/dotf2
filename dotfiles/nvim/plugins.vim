@@ -1,7 +1,3 @@
-" Airline
-let g:airline_powerline_fonts=1
-let g:airline_enable_fugitive=1
-
 " CtrlP settings
 if executable('ag')
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore

@@ -1,6 +1,16 @@
 " Syntax highlighting
 syntax on
 
+" Status line
+set statusline=%f%m%r%h%w
+set statusline+=\ \ \ %{fugitive#head()}
+set statusline+=%=%y
+set statusline+=\ \ %{&fileencoding?&fileencoding:&encoding}
+set statusline+=[%{&fileformat}\]
+set statusline+=\ \ %3p%%
+set statusline+=\ %4l:%L
+set statusline+=\ :\ %3c
+
 " Colorscheme
 if has('gui_running')
   set guioptions-=m  "remove menu bar
@@ -21,7 +31,6 @@ else
   " Only for HighColor schemes.
   " set termguicolors
   color molokai
-  let g:airline_theme='molokai'
 endif
 
 " Color column (position depends on file types)
