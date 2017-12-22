@@ -33,21 +33,6 @@ if executable('ag')
   let g:ctrlp_brief_prompt = 1
 endif
 
-" NERDTree settings
-let NERDTreeShowHidden = 1
-let NERDTreeIgnore=['\~$', '^coverage$', '^log$', '\.tags$', 'tags.lock$', '^\.git$', '\.swp$', '^\.svn', '^\.DS_Store$']
-let g:NERDTreeIndicatorMapCustom = {
-  \ "Modified"  : "~",
-  \ "Staged"    : "+",
-  \ "Untracked" : "✭",
-  \ "Renamed"   : "➜",
-  \ "Unmerged"  : "-",
-  \ "Deleted"   : "✖",
-  \ "Dirty"     : "✗",
-  \ "Clean"     : "✔︎",
-  \ "Unknown"   : "?"
-  \ }
-
 " Startify settings.
 let g:startify_custom_header =
   \ map(split(system('fortune | cowsay -f tux'), '\n'), '"   ". v:val') + ['','']
@@ -92,9 +77,3 @@ call expand_region#custom_text_objects('ruby', {
       \ 'im' :0,
       \ 'am' :0,
       \ })
-
-" Taglist
-let g:Tlist_Use_Right_Window = 1
-let g:Tlist_WinWidth = 45
-let g:Tlist_GainFocus_On_ToggleOpen = 1
-let g:Tlist_Close_On_Select = 1

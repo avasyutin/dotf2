@@ -12,12 +12,8 @@ nnoremap <leader>, :CtrlP<CR>
 nnoremap <leader>. :CtrlPBuffer<CR>
 nnoremap <leader>r :CtrlPTag<CR>
 
-" NERDTree keybindings
-nmap <leader>p :NERDTreeFind<CR>
-nnoremap <leader>n :NERDTreeToggle<CR>
-
-" Switch between nu/rnu
-" nnoremap <leader>rr :call RnuToggle()<CR>
+" Netrw
+nmap <leader>p :Explore<CR>
 
 " Quick ag search
 nmap <leader>g :Ack -Q <cword><CR>

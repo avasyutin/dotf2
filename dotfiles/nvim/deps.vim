@@ -25,8 +25,6 @@ Plug 'tpope/vim-fugitive'
 
 " Project navigation
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
-Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 Plug 'mhinz/vim-startify'
 
 " Programming

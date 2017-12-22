@@ -3,7 +3,7 @@ syntax on
 
 " Status line
 set statusline=%f%m%r%h%w
-set statusline+=\ \ \ %{fugitive#head()}
+set statusline+=\ \ %{fugitive#statusline()}
 set statusline+=%=%y
 set statusline+=\ \ %{&fileencoding?&fileencoding:&encoding}
 set statusline+=[%{&fileformat}\]
@@ -35,6 +35,11 @@ endif
 
 " Color column (position depends on file types)
 hi ColorColumn ctermbg=234, guibg=#333333
+
+" Netrw settings
+let g:netrw_liststyle=1
+let g:netrw_banner=0
+let g:netrw_list_hide= '\.git\/$,\._gems\/$,\.bundle\/$,\.tags$,\.swp$,\.DS_Store$'
 
 " Show line numbers
 set number
