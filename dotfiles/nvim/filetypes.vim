@@ -3,18 +3,19 @@ filetype on
 
 " Enable file type detection and do language-dependent indenting.
 filetype plugin indent on
+set smartindent
 
 " Copy indent from current line when starting a new line.
 set autoindent
 
 " Indentetion settings
-autocmd Filetype html             setlocal ts=2 sw=2 expandtab
+autocmd Filetype html             setlocal ts=4 sw=4 expandtab
 autocmd Filetype yaml             setlocal ts=2 sw=2 expandtab
 autocmd Filetype scala            setlocal ts=2 sw=2 expandtab colorcolumn=110
 autocmd Filetype java             setlocal ts=2 sw=2 expandtab colorcolumn=110
 autocmd Filetype python           setlocal ts=4 sw=4 expandtab colorcolumn=110
 autocmd Filetype ruby             setlocal ts=2 sw=2 expandtab colorcolumn=110
-autocmd Filetype eruby            setlocal ts=2 sw=2 expandtab colorcolumn=110
+autocmd Filetype eruby            setlocal ts=4 sw=4 expandtab colorcolumn=110
 autocmd Filetype stylus           setlocal ts=2 sw=2 expandtab
 autocmd Filetype vim              setlocal ts=2 sw=2 expandtab colorcolumn=110
 autocmd Filetype json             setlocal ts=2 sw=2 expandtab
