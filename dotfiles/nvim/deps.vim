@@ -29,8 +29,6 @@ Plug 'mhinz/vim-startify'
 
 " Programming
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
-Plug 'tpope/vim-rails', { 'for': 'ruby' }
-Plug 'tpope/vim-bundler', { 'for': 'ruby' }
 Plug 'slim-template/vim-slim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }

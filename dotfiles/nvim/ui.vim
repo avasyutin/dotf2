@@ -50,7 +50,6 @@ set listchars=trail:␣,space:⋅,tab:⇨\ ,extends:>,precedes:<
 hi specialkey ctermfg=238, guifg=#4d4d4d
 hi nontext ctermfg=238, guifg=#4d4d4d
 
-
 " Search settings.
 set showmatch
 set hlsearch
