@@ -28,14 +28,6 @@ function! RipperTagsGen()
   endif
 endfunction
 
-function! RnuToggle()
-  if(&relativenumber == 1)
-    set nornu
-  else
-    set rnu
-  endif
-endfunc
-
 function! IsLinux()
   return system("uname -s") =~ 'Linux'
 endfunction

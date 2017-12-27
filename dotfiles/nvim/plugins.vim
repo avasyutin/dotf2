@@ -1,5 +1,5 @@
-" CtrlP settings
 if executable('ag')
+  " CtrlP settings
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
   let g:ctrlp_user_command = 'ag %s -l -i -U --nocolor --nogroup --hidden
     \ --ignore="bin/"
@@ -31,6 +31,10 @@ if executable('ag')
   let g:ctrlp_max_files = 10
   let g:ctrlp_lazy_update = 0
   let g:ctrlp_brief_prompt = 1
+
+  " Ack
+  let g:ackprg = 'ag --vimgrep'
+  cnoreabbrev Ack Ack!
 endif
 
 " Startify settings.
@@ -65,12 +69,6 @@ let g:NERDDefaultAlign = 'left'
 
 " Supertab
 let g:SuperTabDefaultCompletionType = '<c-n>' " To prevent navigate the completion menu from bottom to top
-
-" Ack
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
-end
-cnoreabbrev Ack Ack!
 
 " vim-expand-region settings for ruby
 call expand_region#custom_text_objects('ruby', {
