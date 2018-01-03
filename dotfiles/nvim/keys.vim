@@ -12,12 +12,6 @@ nnoremap <leader>, :CtrlP<CR>
 nnoremap <leader>. :CtrlPBuffer<CR>
 nnoremap <leader>r :CtrlPTag<CR>
 
-" Netrw
-nmap <leader>p :Explore<CR>
-
 " Quick ag search
 nmap <leader>g :Ack -Q <cword><CR>
 vmap <leader>g :call AckFromSelection()<CR>
-
-" Quick save and exit!
-nmap <leader>qq :wqa!<CR>
