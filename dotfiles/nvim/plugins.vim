@@ -1,7 +1,5 @@
 if executable('ag')
-  " CtrlP settings
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l -i -U --nocolor --nogroup --hidden
+  let s:ag_ignores = '
     \ --ignore="bin/"
     \ --ignore="*.gif"
     \ --ignore="*.png"
@@ -24,8 +22,11 @@ if executable('ag')
     \ --ignore="public/external"
     \ --ignore="public/builder"
     \ --ignore="public/packs"
-    \ --ignore="public/packs-test"
-    \ -g ""'
+    \ --ignore="public/packs-test"'
+
+  " CtrlP settings
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l -i -U --nocolor --nogroup --hidden ' . s:ag_ignores . ' -g ""'
 
   let g:ctrlp_use_caching = 1
   let g:ctrlp_max_files = 10
@@ -33,7 +34,8 @@ if executable('ag')
   let g:ctrlp_brief_prompt = 1
 
   " Ack
-  let g:ackprg = 'ag --vimgrep'
+  let g:ackprg = 'ag --vimgrep ' . s:ag_ignores
+
   cnoreabbrev Ack Ack!
 endif
 
