@@ -28,6 +28,10 @@ function! RipperTagsGen()
   endif
 endfunction
 
+function! PrettifyJSON()
+  execute "%!python -m json.tool"
+endfunction
+
 function! IsLinux()
   return system("uname -s") =~ 'Linux'
 endfunction
