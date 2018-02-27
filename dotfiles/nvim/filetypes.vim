@@ -25,7 +25,7 @@ autocmd Filetype sass             setlocal ts=2 sw=2 expandtab colorcolumn=110
 autocmd Filetype scss             setlocal ts=2 sw=2 expandtab colorcolumn=110
 autocmd Filetype css              setlocal ts=2 sw=2 expandtab colorcolumn=110
 autocmd Filetype mustache         setlocal ts=2 sw=2 expandtab
-autocmd Filetype javascript       setlocal ts=4 sw=4 expandtab colorcolumn=110
+autocmd Filetype javascript       setlocal ts=2 sw=2 expandtab colorcolumn=110
 autocmd Filetype coffee           setlocal ts=2 sw=2 expandtab colorcolumn=110
 autocmd Filetype crystal          setlocal ts=2 sw=2 expandtab colorcolumn=110
 autocmd Filetype cucumber         setlocal ts=2 sw=2 expandtab colorcolumn=110
