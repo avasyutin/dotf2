@@ -15,3 +15,6 @@ nnoremap <leader>r :CtrlPTag<CR>
 " Quick ag search
 nmap <leader>g :Ack -Q <cword><CR>
 vmap <leader>g :call AckFromSelection()<CR>
+
+" NERDTree keybindings
+nmap - :NERDTreeFind<CR>
