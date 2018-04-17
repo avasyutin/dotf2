@@ -108,6 +108,6 @@ export ANSIBLE_NOCOWS=1
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
 export SKIP_SIMPLECOV=1
 
-if [ ! -v TMUX ]; then
+if [ ! -n "$TMUX" ]; then
   ta home || tnew home
 fi
