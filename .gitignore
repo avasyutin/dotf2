@@ -49,3 +49,4 @@ dotfiles/emacs.d/smex-items
 dotfiles/nvim/plugged/*
 dotfiles/nvim/autoload/plug.vim
 dotfiles/nvim/view
+.ignore
