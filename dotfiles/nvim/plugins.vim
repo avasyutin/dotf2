@@ -3,6 +3,7 @@ let NERDTreeShowHidden = 1
 let NERDTreeIgnore=['\~$', '^coverage$', '^log$', '\.tags$', 'tags.lock$', '^\.git$', '\.swp$', '^\.svn', '^\.DS_Store$']
 let NERDTreeQuitOnOpen = 1
 let NERDTreeAutoDeleteBuffer = 1
+command! NERDTreeSmart call NERDTreeSmart()
 
 if executable('ag')
   let s:ag_ignores = '
