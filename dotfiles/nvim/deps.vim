@@ -1,51 +1,52 @@
-function! DoRemote(arg)
-  UpdateRemotePlugins
-endfunction
-
-call plug#begin('~/.vim/plugged')
+packadd minpac
+call minpac#init()
 
 " Common plugins and libraries
-Plug 'tpope/vim-sensible'
-Plug 'vim-scripts/L9'
-Plug 'tomtom/tlib_vim'
-Plug 'marcweber/vim-addon-mw-utils'
-Plug 'tmux-plugins/vim-tmux-focus-events'
+call minpac#add('tpope/vim-sensible')
+call minpac#add('vim-scripts/L9')
+call minpac#add('tomtom/tlib_vim')
+call minpac#add('marcweber/vim-addon-mw-utils')
+call minpac#add('tmux-plugins/vim-tmux-focus-events')
 
-Plug 'Raimondi/delimitMate'
-Plug 'tpope/vim-endwise'
-Plug 'terryma/vim-expand-region'
-Plug 'tpope/vim-surround'
+" Editing
+call minpac#add('Raimondi/delimitMate')
+call minpac#add('tpope/vim-endwise')
+call minpac#add('terryma/vim-expand-region')
+call minpac#add('tpope/vim-surround')
 
 " UI
-Plug 'chriskempson/base16-vim'
+call minpac#add('chriskempson/base16-vim')
+call minpac#add('tomasr/molokai')
 
 " Git
-Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
+call minpac#add('airblade/vim-gitgutter')
+call minpac#add('tpope/vim-fugitive')
 
 " Project navigation
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'mhinz/vim-startify'
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
+call minpac#add('ctrlpvim/ctrlp.vim')
+call minpac#add('mhinz/vim-startify')
+call minpac#add('scrooloose/nerdtree')
 
 " Programming
-Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
-Plug 'slim-template/vim-slim'
-Plug 'scrooloose/nerdcommenter'
-Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+call minpac#add('vim-ruby/vim-ruby')
+call minpac#add('slim-template/vim-slim')
+call minpac#add('scrooloose/nerdcommenter')
+call minpac#add('kchmck/vim-coffee-script')
 
 " Autocompletion
-Plug 'ervandew/supertab'
+call minpac#add('ervandew/supertab')
 
 " Snippets
-Plug 'garbas/vim-snipmate'
+call minpac#add('garbas/vim-snipmate')
 
 " Searching
-Plug 'mileszs/ack.vim'
+call minpac#add('mileszs/ack.vim')
 
-call plug#end()
+function! NeedPluginsInstall()
+  let l:cmd = 'ls -A ~/.vim/pack/minpac/start'
+  return system(l:cmd) == ''
+endfunction
 
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent execute '!curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-  autocmd VimEnter * PlugInstall
+if NeedPluginsInstall()
+  call minpac#update()
 endif

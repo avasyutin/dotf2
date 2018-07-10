@@ -3,7 +3,6 @@ let NERDTreeShowHidden = 1
 let NERDTreeIgnore=['\~$', '^coverage$', '^log$', '\.tags$', 'tags.lock$', '^\.git$', '\.swp$', '^\.svn', '^\.DS_Store$']
 let NERDTreeQuitOnOpen = 1
 let NERDTreeAutoDeleteBuffer = 1
-command! NERDTreeSmart call NERDTreeSmart()
 
 if executable('ag')
   let s:ag_ignores = '
@@ -79,8 +78,18 @@ let g:NERDDefaultAlign = 'left'
 " Supertab
 let g:SuperTabDefaultCompletionType = '<c-n>' " To prevent navigate the completion menu from bottom to top
 
-" vim-expand-region settings for ruby
-call expand_region#custom_text_objects('ruby', {
-      \ 'im' :0,
-      \ 'am' :0,
-      \ })
+" Settings for ruby for vim-expand-region
+let g:expand_region_text_objects_ruby = {
+      \ 'ie': 0,
+      \ 'ip': 0,
+      \ 'iw': 0,
+      \ 'iB': 1,
+      \ 'il': 0,
+      \ 'iW': 0,
+      \ 'i''': 0,
+      \ 'ib': 1,
+      \ 'i]': 1,
+      \ 'i"': 0,
+      \ 'im': 0,
+      \ 'am': 0
+      \ }

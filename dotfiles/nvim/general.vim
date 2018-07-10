@@ -39,9 +39,6 @@ set tags=./.tags;
 " Enable access to clipboard
 set clipboard=unnamed,unnamedplus
 
-" Underscore as word-break (it usefull but breaks syntax highlighting for ruby)
-" set iskeyword-=_
-
 " Strip trailing spaces before save.
 autocmd BufWritePre *.* :call StripTrailingWhitespaces()
 
@@ -50,15 +47,6 @@ autocmd FileType * autocmd BufWritePre <buffer> :%s/\($\n\s*\)\+\%$//e
 
 " Blank line at end of file.
 set eol
-
-" Generate .tags file for ruby/rails projects.
-command! RipperTagsGen call RipperTagsGen()
-
-" Reload VIM config.
-command! ReloadConfig call ReloadConfig()
-
-" Prettify JSON.
-command! PrettifyJSON call PrettifyJSON()
 
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *

@@ -3,7 +3,7 @@
     - zsh
     - { role: git, tags: git }
     - ruby
-    - vim
+    - { role: vim, tags: vim }
     - tmux
     - { role: emacs, tags: emacs }
     - { role: ctags, tags: ctags }

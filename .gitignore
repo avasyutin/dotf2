@@ -46,7 +46,6 @@ python-*-docs-html
 playbook.retry
 dotfiles/emacs.d/saveplace
 dotfiles/emacs.d/smex-items
-dotfiles/nvim/plugged/*
-dotfiles/nvim/autoload/plug.vim
 dotfiles/nvim/view
+dotfiles/nvim/pack
 .ignore
