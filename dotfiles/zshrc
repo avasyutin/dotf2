@@ -76,6 +76,9 @@ export LC_CTYPE=en_US.UTF-8
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+# Make ripgrep working
+unalias rg
+
 # Aliases for Tmux
 alias tmux='tmux -2'
 alias ta='tmux attach -t'
