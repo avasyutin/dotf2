@@ -23,7 +23,6 @@ call minpac#add('airblade/vim-gitgutter')
 call minpac#add('tpope/vim-fugitive')
 
 " Project navigation
-call minpac#add('ctrlpvim/ctrlp.vim')
 call minpac#add('mhinz/vim-startify')
 call minpac#add('scrooloose/nerdtree')
 
@@ -42,11 +41,11 @@ call minpac#add('garbas/vim-snipmate')
 " Searching
 call minpac#add('mileszs/ack.vim')
 
-function! NeedPluginsInstall()
+function! s:need_install()
   let l:cmd = 'ls -A ~/.vim/pack/minpac/start'
   return system(l:cmd) == ''
 endfunction
 
-if NeedPluginsInstall()
+if s:need_install()
   call minpac#update()
 endif

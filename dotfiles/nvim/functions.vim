@@ -61,6 +61,17 @@ function! NERDTreeSmart()
   endif
 endfunction
 
+function! FZFBuflist()
+  redir => ls
+  silent ls
+  redir END
+  return split(ls, '\n')
+endfunction
+
+function! FZFBufopen(e)
+  execute 'buffer' matchstr(a:e, '^[ 0-9]*')
+endfunction
+
 " Commands for minpac.`
 command! PackUpdate call minpac#update()
 command! PackClean call minpac#clean()

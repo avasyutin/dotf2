@@ -7,13 +7,17 @@ let maplocalleader = '\\'
 " Go to previous file
 nnoremap <leader>b <C-^>
 
-" CtrlP keybindings
-nnoremap <leader>, :CtrlP<CR>
-nnoremap <leader>. :CtrlPBuffer<CR>
-nnoremap <leader>r :CtrlPTag<CR>
+" FZF keybindings
+nnoremap <leader>, :FZF<CR>
+nnoremap <silent> <leader>. :call fzf#run({
+      \ 'source': reverse(FZFBuflist()),
+      \ 'sink': function('FZFBufopen'),
+      \ 'options': '+m',
+      \ 'down': len(FZFBuflist()) + 2
+      \ })<CR>
 
-" Quick ag search
-nmap <leader>g :Ack -Q <cword><CR>
+" Quick search
+nmap <leader>g :Ack <cword><CR>
 vmap <leader>g :call AckFromSelection()<CR>
 
 " NERDTree keybindings
