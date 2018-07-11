@@ -13,10 +13,10 @@ set statusline+=\ :\ %3c
 
 " Colorscheme
 if has('gui_running')
-  set guioptions-=m  "remove menu bar
-  set guioptions-=T  "remove toolbar
-  set guioptions-=r  "remove right-hand scroll bar
-  set guioptions-=L  "remove left-hand scroll bar
+  set guioptions-=m "remove menu bar
+  set guioptions-=T "remove toolbar
+  set guioptions-=r "remove right-hand scroll bar
+  set guioptions-=L "remove left-hand scroll bar
 
   set background=dark
   color base16-monokai
@@ -31,15 +31,17 @@ else
   " Only for HighColor schemes.
   " set termguicolors
   color molokai
+
+  " Color column (position depends on file types)
+  hi ColorColumn ctermbg=235
+
+  " Set background for selected text in Visiual Bode
+  hi Visual ctermbg=238
+
+  " Set colors for whitespace marks
+  hi specialkey ctermfg=238
+  hi nontext ctermfg=238
 endif
-
-" Color column (position depends on file types)
-hi ColorColumn ctermbg=234, guibg=#333333
-
-" Netrw settings
-let g:netrw_liststyle=1
-let g:netrw_banner=0
-let g:netrw_list_hide= '\.git\/$,\._gems\/$,\.bundle\/$,\.tags$,\.swp$,\.DS_Store$'
 
 " Show line numbers
 set number
@@ -47,8 +49,6 @@ set nornu
 
 " Whitespaces look and feel
 set listchars=trail:␣,space:⋅,tab:⇨\ ,extends:>,precedes:<
-hi specialkey ctermfg=238, guifg=#4d4d4d
-hi nontext ctermfg=238, guifg=#4d4d4d
 
 " Search settings.
 set showmatch

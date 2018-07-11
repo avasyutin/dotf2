@@ -2,7 +2,6 @@
 nnoremap ; :
 
 let mapleader = ','
-let maplocalleader = '\\'
 
 " Go to previous file
 nnoremap <leader>b <C-^>
