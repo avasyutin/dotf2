@@ -59,3 +59,11 @@ augroup AutoSaveFolds
   autocmd BufWinLeave *.* mkview
   autocmd BufWinEnter *.* silent! loadview
 augroup END
+
+" Spell checking
+set spell spelllang=en,ru_yo
+
+" Change keymap
+set keymap=russian-jcukenwin
+set iminsert=0
+set imsearch=0

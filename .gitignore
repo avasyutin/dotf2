@@ -49,3 +49,6 @@ dotfiles/emacs.d/smex-items
 dotfiles/nvim/view
 dotfiles/nvim/pack
 .ignore
+
+# Ignore vim user's wordlist
+dotfiles/nvim/spell/*add*
