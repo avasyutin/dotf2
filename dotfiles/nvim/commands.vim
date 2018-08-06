@@ -13,3 +13,6 @@ command! ReloadConfig call ReloadConfig()
 
 " Prettify JSON.
 command! PrettifyJSON call PrettifyJSON()
+
+" Clear Views cache
+command! ClearCache call ClearCache()

@@ -71,3 +71,8 @@ endfunction
 function! FZFBufopen(e)
   execute 'buffer' matchstr(a:e, '^[ 0-9]*')
 endfunction
+
+function! ClearCache()
+  execute 'silent ! rm -rf ' . $VIMHOME . '/view/*'
+  execute 'redraw!'
+endfunction
