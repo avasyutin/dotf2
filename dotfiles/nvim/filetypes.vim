@@ -1,4 +1,4 @@
-" Try to detect filetypes.
+" Try to detect file types.
 filetype on
 
 " Enable file type detection and do language-dependent indenting.
@@ -8,7 +8,7 @@ set smartindent
 " Copy indent from current line when starting a new line.
 set autoindent
 
-" Indentetion settings
+" Indentation settings
 autocmd Filetype html             setlocal ts=2 sw=2 expandtab
 autocmd Filetype yaml             setlocal ts=2 sw=2 expandtab
 autocmd Filetype scala            setlocal ts=2 sw=2 expandtab colorcolumn=110
@@ -34,3 +34,5 @@ autocmd Filetype go               setlocal ts=4 sw=4 colorcolumn=110
 
 autocmd BufNewFile,BufRead *.rb.j2 setlocal ts=2 sw=2 expandtab
 autocmd BufNewFile,BufRead *.conf.j2 setlocal ts=4 sw=4 expandtab
+
+autocmd Filetype qf setlocal nospell
