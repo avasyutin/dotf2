@@ -17,6 +17,7 @@ call minpac#add('tpope/vim-surround')
 " UI
 call minpac#add('chriskempson/base16-vim')
 call minpac#add('tomasr/molokai')
+call minpac#add('liuchengxu/space-vim-dark')
 
 " Git
 call minpac#add('airblade/vim-gitgutter')

@@ -19,7 +19,8 @@ if has('gui_running')
   set guioptions-=L "remove left-hand scroll bar
 
   set background=dark
-  color base16-monokai
+  " color base16-monokai
+  color space-vim-dark
 
   if IsMac()
     set guifont=Fira\ Code\ Light:h12
@@ -30,12 +31,17 @@ if has('gui_running')
 else
   " Only for HighColor schemes.
   " set termguicolors
-  color molokai
+  " color molokai
+  color space-vim-dark
+  " If you prefer the grey comment
+  hi Comment guifg=#5C6370 ctermfg=59
+  " Nice red color for misspelled words
+  hi SpellBad ctermbg=NONE ctermfg=124
 
   " Color column (position depends on file types)
   hi ColorColumn ctermbg=235
 
-  " Set background for selected text in Visiual Bode
+  " Set background for selected text in Visual Bode
   hi Visual ctermbg=238
 
   " Set colors for whitespace marks
