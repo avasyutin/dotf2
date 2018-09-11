@@ -54,7 +54,7 @@ endfunction
 
 function! NERDTreeSmart()
   let l:curr_buf = @%
-  if l:curr_buf == 'Startify' || l:curr_buf =~ 'NERD_tree'
+  if l:curr_buf == 0 || l:curr_buf == 'Startify' || l:curr_buf =~ 'NERD_tree'
     execute 'NERDTreeToggle'
   else
     execute 'NERDTreeFind'
