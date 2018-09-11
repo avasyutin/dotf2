@@ -39,7 +39,7 @@ else
   hi SpellBad ctermbg=NONE ctermfg=124
 
   " Color column (position depends on file types)
-  hi ColorColumn ctermbg=235
+  hi ColorColumn ctermbg=236
 
   " Set background for selected text in Visual Bode
   hi Visual ctermbg=238
