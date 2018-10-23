@@ -64,6 +64,6 @@ augroup END
 set spell spelllang=en,ru_yo
 
 " Change keymap
-set keymap=russian-jcukenwin
+set keymap=russian-jcuken
 set iminsert=0
 set imsearch=0
