@@ -33,6 +33,7 @@ call minpac#add('tpope/vim-rails')
 call minpac#add('slim-template/vim-slim')
 call minpac#add('scrooloose/nerdcommenter')
 call minpac#add('kchmck/vim-coffee-script')
+call minpac#add('elixir-editors/vim-elixir')
 
 " Autocompletion
 call minpac#add('ervandew/supertab')
