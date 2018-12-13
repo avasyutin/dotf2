@@ -49,7 +49,7 @@ endif
 function! AckFromSelection()
   normal! ""gvy
   let l:selection = shellescape(substitute(getreg('"'), '\n\+$', '', ''))
-  execute "Ack! '" . l:selection . "'"
+  execute "Ack! -F " . l:selection
 endfunction
 
 function! NERDTreeSmart()
