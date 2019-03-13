@@ -17,3 +17,5 @@ doc/tags
 .netrwhist
 *.retry
 /doc/notes.txt
+.vscode
+
