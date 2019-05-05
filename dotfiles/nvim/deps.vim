@@ -28,9 +28,6 @@ call minpac#add('mhinz/vim-startify')
 call minpac#add('scrooloose/nerdtree')
 
 " Programming
-call minpac#add('vim-ruby/vim-ruby')
-call minpac#add('tpope/vim-rails')
-call minpac#add('slim-template/vim-slim')
 call minpac#add('scrooloose/nerdcommenter')
 call minpac#add('elixir-editors/vim-elixir')
 

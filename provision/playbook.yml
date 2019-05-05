@@ -5,6 +5,6 @@
     - ruby
     - { role: vim, tags: vim }
     - tmux
-    - { role: emacs, tags: emacs }
+    # - { role: emacs, tags: emacs }
     - { role: ctags, tags: ctags }
-    - { role: dosbox, tags: dosbox }
+    # - { role: dosbox, tags: dosbox }

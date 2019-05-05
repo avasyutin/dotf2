@@ -1,2 +1,10 @@
+- name: install oh-my-zsh
+  shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 - name: 'symlink zshrc'
-  file: src={{dotfiles_dir}}/zshrc dest=~/.zshrc state=link
+  file: src={{dotfiles_dir}}/zshrc dest=~/.zshrc state=link force=yes
+- name: set default shell
+  become: true
+  become_user: root
+  user:
+    name: '{{ ansible_user }}'
+    shell: /bin/zsh

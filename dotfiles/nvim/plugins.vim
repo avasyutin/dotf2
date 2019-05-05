@@ -31,7 +31,7 @@ let g:startify_skiplist = [
       \ '/Users/mhi/local/vim/share/vim/vim74/doc',
       \ ]
 let g:startify_custom_footer =
-      \ ['', "   Vim is charityware. Please read ':help uganda'.", '']
+      \ ['', "   Vim is charityware. Please read ':help Uganda'.", '']
 
 " NERDCommenter
 let g:NERDSpaceDelims = 1
