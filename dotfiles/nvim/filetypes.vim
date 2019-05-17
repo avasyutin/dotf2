@@ -32,6 +32,8 @@ autocmd Filetype crystal          setlocal ts=2 sw=2 expandtab colorcolumn=110
 autocmd Filetype cucumber         setlocal ts=2 sw=2 expandtab colorcolumn=110
 autocmd Filetype cpp              setlocal ts=4 sw=4 expandtab colorcolumn=110
 autocmd Filetype go               setlocal ts=4 sw=4 colorcolumn=110
+autocmd Filetype txt              setlocal ts=2 sw=2 spell
+autocmd Filetype markdown         setlocal ts=2 sw=2 spell
 
 autocmd BufNewFile,BufRead *.rb.j2 setlocal ts=2 sw=2 expandtab
 autocmd BufNewFile,BufRead *.conf.j2 setlocal ts=4 sw=4 expandtab

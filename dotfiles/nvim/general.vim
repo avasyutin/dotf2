@@ -62,6 +62,7 @@ augroup END
 
 " Spell checking
 set spell spelllang=en,ru_yo
+set nospell
 
 " Change keymap
 set keymap=russian-jcuken

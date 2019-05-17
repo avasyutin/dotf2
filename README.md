@@ -4,7 +4,7 @@
 
 After vim was installed run it and execute:
 
-1. :PlugInstall (and restart vim).
+1. :PackUpdate (and restart vim).
 
 ## Pass variables to the playbook from command line
 
