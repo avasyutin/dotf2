@@ -18,4 +18,4 @@ doc/tags
 *.retry
 /doc/notes.txt
 .vscode
-
+/ansible/.vault_pass
