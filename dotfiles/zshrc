@@ -50,3 +50,7 @@ export VAGRANT_DEFAULT_PROVIDER=virtualbox
 # FZF
 source /usr/share/fzf/shell/key-bindings.zsh
 export FZF_DEFAULT_COMMAND='rg --files'
+
+# Go
+export GOPATH="$HOME/work/go"
+export PATH="$GOPATH/bin:$PATH"
