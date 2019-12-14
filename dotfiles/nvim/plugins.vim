@@ -1,11 +1,11 @@
 " NERDTree settings
 let NERDTreeShowHidden = 1
-let NERDTreeIgnore=['\~$', '^coverage$', '^log$', '\.tags$', 'tags.lock$', '^\.git$']
+let NERDTreeIgnore=['\~$', '^coverage$', '^log$', '\.tags$', 'tags.lock$', '^\.git$', 'node_modules', 'tmp']
 let NERDTreeQuitOnOpen = 1
 let NERDTreeAutoDeleteBuffer = 1
 
 " Ack
-let g:ackprg = 'rg --vimgrep'
+let g:ackprg = 'rg -s -F --vimgrep'
 " cnoreabbrev Ack Ack!
 
 " Startify settings.
@@ -63,3 +63,7 @@ let $FZF_DEFAULT_OPTS='
       \ --color fg:252,bg:233,hl:67,fg+:252,bg+:235,hl+:81
       \ --color info:144,prompt:161,spinner:135,pointer:135,marker:118
       \ '
+
+" Terraform
+let g:terraform_align=1
+let g:terraform_fmt_on_save=1

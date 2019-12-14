@@ -4,7 +4,7 @@
     - { role: git, tags: git }
     - ruby
     - { role: vim, tags: vim }
-    - tmux
+    - { role: tmux, tags: tmux }
     # - { role: emacs, tags: emacs }
     - { role: ctags, tags: ctags }
     # - { role: dosbox, tags: dosbox }

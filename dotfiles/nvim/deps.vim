@@ -13,11 +13,14 @@ call minpac#add('Raimondi/delimitMate')
 call minpac#add('tpope/vim-endwise')
 call minpac#add('terryma/vim-expand-region')
 call minpac#add('tpope/vim-surround')
+call minpac#add('godlygeek/tabular')
 
 " UI
 call minpac#add('chriskempson/base16-vim')
 call minpac#add('tomasr/molokai')
 call minpac#add('liuchengxu/space-vim-dark')
+" call minpac#add('edkolev/tmuxline.vim')
+" call minpac#add('itchyny/lightline.vim')
 
 " Git
 call minpac#add('airblade/vim-gitgutter')
@@ -29,7 +32,8 @@ call minpac#add('scrooloose/nerdtree')
 
 " Programming
 call minpac#add('scrooloose/nerdcommenter')
-call minpac#add('elixir-editors/vim-elixir')
+" call minpac#add('elixir-editors/vim-elixir')
+call minpac#add('hashivim/vim-terraform')
 
 " Autocompletion
 call minpac#add('ervandew/supertab')

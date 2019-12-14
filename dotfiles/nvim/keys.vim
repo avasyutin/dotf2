@@ -21,3 +21,6 @@ vmap <leader>g :call AckFromSelection()<CR>
 
 " NERDTree keybindings
 nmap - :NERDTreeSmart<CR>
+
+" Toggle folding
+nmap <Space> za

@@ -54,6 +54,8 @@ autocmd BufReadPost *
      \   exe "normal! g`\"" |
      \ endif
 
+set foldlevelstart=10
+
 augroup AutoSaveFolds
   autocmd!
   autocmd BufWinLeave *.* mkview
