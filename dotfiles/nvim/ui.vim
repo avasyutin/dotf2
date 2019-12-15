@@ -68,3 +68,6 @@ set wildmenu
 
 " Don't wrap lines.
 set nowrap
+
+" Mouse
+set mouse=a
