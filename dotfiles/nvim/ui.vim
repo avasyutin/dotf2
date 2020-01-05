@@ -70,4 +70,6 @@ set wildmenu
 set nowrap
 
 " Mouse
+" ttymouse important to use inside tmux
+set ttymouse=xterm2
 set mouse=a

@@ -24,3 +24,5 @@ nmap - :NERDTreeSmart<CR>
 
 " Toggle folding
 nmap <Space> za
+
+noremap <LeftRelease> "+y<LeftRelease>
