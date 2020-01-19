@@ -63,3 +63,6 @@ export PATH="$GOPATH/bin:$PATH"
 
 # The next line updates PATH for Yandex Cloud CLI.
 if [ -f "$HOME/yandex-cloud/path.bash.inc" ]; then source "$HOME/yandex-cloud/path.bash.inc"; fi
+
+# Qt
+export PATH="/home/rain/Qt/5.12.6/gcc_64/bin:$PATH"
