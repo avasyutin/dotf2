@@ -1,6 +1,6 @@
 " NERDTree settings
 let NERDTreeShowHidden = 1
-let NERDTreeIgnore=['\~$', '^coverage$', '^log$', '\.tags$', 'tags.lock$', '^\.git$', 'node_modules', 'tmp']
+let NERDTreeIgnore=['\~$', '^coverage$', '^log$', '\.tags$', 'tags.lock$', '^\.git$', 'node_modules', 'tmp', '.DS_Store']
 let NERDTreeQuitOnOpen = 1
 let NERDTreeAutoDeleteBuffer = 1
 
