@@ -11,6 +11,7 @@ call minpac#add('tmux-plugins/vim-tmux-focus-events')
 " Editing
 call minpac#add('Raimondi/delimitMate')
 call minpac#add('tpope/vim-endwise')
+call minpac#add('tpope/vim-abolish')
 call minpac#add('terryma/vim-expand-region')
 call minpac#add('tpope/vim-surround')
 call minpac#add('godlygeek/tabular')
