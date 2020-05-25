@@ -30,24 +30,26 @@ if has('gui_running')
   endif
 else
   " Only for HighColor schemes.
-  " set termguicolors
-  color molokai
+  set termguicolors
+  " color molokai
   " color space-vim-dark
+  color base16-monokai
 
-  " If you prefer the grey comment
-  hi Comment guifg=#5C6370 ctermfg=59
-  " Nice red color for misspelled words
-  hi SpellBad ctermbg=NONE ctermfg=124
+  " " If you prefer the grey comment
+  " hi Comment guifg=#5C6370 ctermfg=59
+  " " Nice red color for misspelled words
+  " hi SpellBad ctermbg=NONE ctermfg=124
 
   " Color column (position depends on file types)
-  hi ColorColumn ctermbg=236
+  " hi ColorColumn ctermbg=236
+  hi ColorColumn ctermbg=220;
 
-  " Set background for selected text in Visual Bode
-  hi Visual ctermbg=238
+  " " Set background for selected text in Visual Bode
+  " hi Visual ctermbg=238
 
-  " Set colors for whitespace marks
-  hi specialkey ctermfg=238
-  hi nontext ctermfg=238
+  " " Set colors for whitespace marks
+  " hi specialkey ctermfg=238
+  " hi nontext ctermfg=238
 endif
 
 " Show line numbers

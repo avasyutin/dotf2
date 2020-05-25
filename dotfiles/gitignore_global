@@ -19,3 +19,4 @@ doc/tags
 /doc/notes.txt
 .vscode
 /ansible/.vault_pass
+.idea
