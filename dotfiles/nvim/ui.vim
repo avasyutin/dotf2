@@ -37,8 +37,9 @@ else
 
   " " If you prefer the grey comment
   " hi Comment guifg=#5C6370 ctermfg=59
-  " " Nice red color for misspelled words
-  " hi SpellBad ctermbg=NONE ctermfg=124
+
+  " Nice red color for misspelled words
+  hi SpellBad cterm=underline ctermbg=NONE ctermfg=160
 
   " Color column (position depends on file types)
   " hi ColorColumn ctermbg=236
