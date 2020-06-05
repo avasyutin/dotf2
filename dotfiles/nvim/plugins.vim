@@ -58,6 +58,11 @@ let g:expand_region_text_objects_ruby = {
       \ 'am': 0
       \ }
 
+" FZF plugin for Ubuntu WSL
+if IsMac()
+  source /usr/share/doc/fzf/examples/fzf.vim
+endif
+
 " FZF molokai colors
 let $FZF_DEFAULT_OPTS='
       \ --color fg:252,bg:233,hl:67,fg+:252,bg+:235,hl+:81

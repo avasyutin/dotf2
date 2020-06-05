@@ -40,6 +40,10 @@ function! IsMac()
   return system("uname -s") =~ 'Darwin'
 endfunction
 
+function! IsWSL()
+  return system("uname -s") =~ 'microsoft'
+endfunction
+
 if !exists('*ReloadConfig')
   function ReloadConfig()
     source $MYVIMRC

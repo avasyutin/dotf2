@@ -1,7 +1,5 @@
 - name: create directory for backups and swaps
   file: path=~/.vimtmp state=directory force=yes
-- name: symlink nvim config
-  file: src={{ dotfiles_dir }}/nvim dest=~/.config/nvim state=link force=yes
 - name: symlink vim config
   file: src={{ dotfiles_dir }}/nvim/init.vim dest=~/.vimrc state=link force=yes
 - name: remove old vim directory

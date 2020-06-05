@@ -53,7 +53,8 @@ export ANSIBLE_NOCOWS=1
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
 
 # FZF
-source /usr/share/fzf/shell/key-bindings.zsh
+if [ -f "/usr/share/doc/fzf/examples/key-bindings.zsh" ]; then source /usr/share/doc/fzf/examples/key-bindings.zsh; fi
+if [ -f "/usr/share/fzf/shell/key-bindings.zsh" ]; then source /usr/share/fzf/shell/key-bindings.zsh; fi
 export FZF_DEFAULT_COMMAND='rg --files'
 
 # Go
