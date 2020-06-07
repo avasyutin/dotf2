@@ -41,7 +41,7 @@ function! IsMac()
 endfunction
 
 function! IsWSL()
-  return system("uname -s") =~ 'microsoft'
+  return system("uname -r") =~ 'microsoft'
 endfunction
 
 if !exists('*ReloadConfig')

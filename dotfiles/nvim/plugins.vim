@@ -59,7 +59,7 @@ let g:expand_region_text_objects_ruby = {
       \ }
 
 " FZF plugin for Ubuntu WSL
-if IsMac()
+if IsWSL()
   source /usr/share/doc/fzf/examples/fzf.vim
 endif
 
