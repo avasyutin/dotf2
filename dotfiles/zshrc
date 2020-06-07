@@ -72,3 +72,8 @@ export PATH="/home/rain/Qt/5.12.6/gcc_64/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Enable clipboard integration for WSL2
+if uname -r | grep microsoft > /dev/null; then
+  export DISPLAY=`grep -oP "(?<=nameserver ).+" /etc/resolv.conf`:0.0
+fi
