@@ -20,7 +20,6 @@ if has('gui_running')
 
   set background=dark
   color base16-monokai
-  " color space-vim-dark
 
   if IsMac()
     set guifont=Fira\ Code\ Light:h12
@@ -31,19 +30,16 @@ if has('gui_running')
 else
   " Only for HighColor schemes.
   set termguicolors
-  " color molokai
-  " color space-vim-dark
   color base16-monokai
 
-  " " If you prefer the grey comment
-  " hi Comment guifg=#5C6370 ctermfg=59
-
   " Nice red color for misspelled words
-  hi SpellBad cterm=underline ctermbg=NONE ctermfg=160
+  let &t_Cs = "\e[4:3m"
+  let &t_Ce = "\e[4:0m"
+  hi SpellBad cterm=undercurl gui=undercurl ctermbg=NONE ctermfg=160
 
   " Color column (position depends on file types)
   " hi ColorColumn ctermbg=236
-  hi ColorColumn ctermbg=220;
+  " hi ColorColumn ctermbg=220
 
   " " Set background for selected text in Visual Bode
   " hi Visual ctermbg=238
