@@ -6,5 +6,5 @@
   become: true
   become_user: root
   user:
-    name: '{{ ansible_user }}'
+    name: '{{ current_user }}'
     shell: /bin/zsh

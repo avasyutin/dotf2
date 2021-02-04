@@ -1,2 +1,4 @@
 ---
+
+current_user: '{{ lookup("env", "USER") }}'
 dotfiles_dir: '{{ lookup("env", "PWD") }}/dotfiles'

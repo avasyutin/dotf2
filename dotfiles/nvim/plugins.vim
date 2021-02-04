@@ -72,3 +72,6 @@ let $FZF_DEFAULT_OPTS='
 " Terraform
 let g:terraform_align=1
 let g:terraform_fmt_on_save=1
+
+" Snipmate
+let g:snipMate = { 'snippet_version' : 1 }
