@@ -30,7 +30,8 @@ if has('gui_running')
 else
   " Only for HighColor schemes.
   set termguicolors
-  color base16-monokai
+  " color base16-monokai
+  color molokai
 
   " Nice red color for misspelled words
   let &t_Cs = "\e[4:3m"
