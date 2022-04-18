@@ -84,5 +84,8 @@ if uname -r | grep microsoft > /dev/null; then
   export PGHOST=127.0.0.1
 fi
 
+# Solana
+export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
+
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /home/alexv/opt/terraform terraform
