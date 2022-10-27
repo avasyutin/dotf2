@@ -29,6 +29,7 @@ autocmd Filetype txt              setlocal ts=2 sw=2 spell
 autocmd Filetype vim              setlocal ts=2 sw=2 expandtab colorcolumn=110
 autocmd Filetype vue              setlocal ts=2 sw=2 expandtab foldmethod=syntax colorcolumn=110
 autocmd Filetype yaml             setlocal ts=2 sw=2 expandtab
+autocmd Filetype zsh              setlocal ts=2 sw=2 expandtab
 
 autocmd BufNewFile,BufRead *.rb.j2 setlocal ts=2 sw=2 expandtab
 autocmd BufNewFile,BufRead *.conf.j2 setlocal ts=4 sw=4 expandtab

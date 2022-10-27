@@ -1,6 +1,6 @@
 # Dotf2
 
-## Plugins
+## VIM Plugins
 
 After vim was installed run it and execute:
 
@@ -10,4 +10,29 @@ After vim was installed run it and execute:
 
 ``` shell
 $ ansible-playbook -i provision/inventory.ini provision/playbook.yml --extra-vars='user_name="John Doe" user_email=john.doe@gmail.com'
+```
+
+## Mac & Homebrew reminder
+
+```
+$ brew install \
+  ag \
+  ansible \
+  cowsay \
+  fortune \
+  fzf \
+  git \
+  git \
+  go \
+  htop \
+  nvm \
+  postgresql@15 \
+  rbenv ruby-build \
+  redis \
+  rg \
+  terraform \
+  tmux \
+  vim \
+  wget \
+  zsh
 ```

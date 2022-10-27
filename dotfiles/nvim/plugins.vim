@@ -58,16 +58,24 @@ let g:expand_region_text_objects_ruby = {
       \ 'am': 0
       \ }
 
-" FZF plugin for Ubuntu WSL
+" FZF plugin settings
 if IsWSL()
-  source /usr/share/doc/fzf/examples/fzf.vim
-endif
+  " FZF molokai colors
+  let $FZF_DEFAULT_OPTS='
+        \ --color fg:252,bg:233,hl:67,fg+:252,bg+:235,hl+:81
+        \ --color info:144,prompt:161,spinner:135,pointer:135,marker:118
+        \ '
 
-" FZF molokai colors
-let $FZF_DEFAULT_OPTS='
-      \ --color fg:252,bg:233,hl:67,fg+:252,bg+:235,hl+:81
-      \ --color info:144,prompt:161,spinner:135,pointer:135,marker:118
-      \ '
+  source /usr/share/doc/fzf/examples/fzf.vim
+elseif IsMac()
+  let g:fzf_layout = { 'down':  '40%' }
+
+  autocmd! FileType fzf
+  autocmd  FileType fzf set laststatus=0 noshowmode noruler
+        \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+
+  source /opt/homebrew/opt/fzf/plugin/fzf.vim
+endif
 
 " Terraform
 let g:terraform_align=1

@@ -4,6 +4,6 @@
   roles:
     - zsh
     - { role: git, tags: git }
-    - ruby
+    - { role: devtools, tags: devtools }
     - { role: vim, tags: vim }
     - { role: tmux, tags: tmux }
