@@ -22,7 +22,6 @@ $ brew install \
   fortune \
   fzf \
   git \
-  git \
   go \
   htop \
   nvm \
@@ -32,6 +31,7 @@ $ brew install \
   rg \
   terraform \
   tmux \
+  tmuxp \
   vim \
   wget \
   zsh
