@@ -18,11 +18,15 @@ $ ansible-playbook -i provision/inventory.ini provision/playbook.yml --extra-var
 $ brew install \
   ag \
   ansible \
+  awscli \
   cowsay \
   fortune \
   fzf \
   git \
+  git-secret \
   go \
+  golangci-lint \
+  gpg \
   htop \
   nvm \
   postgresql@15 \
