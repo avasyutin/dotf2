@@ -19,7 +19,9 @@ $ brew install \
   ag \
   ansible \
   awscli \
+  bash \
   cowsay \
+  curl \
   fortune \
   fzf \
   git \
@@ -28,11 +30,13 @@ $ brew install \
   golangci-lint \
   gpg \
   htop \
+  imagemagick \
   nvm \
   postgresql@15 \
   rbenv ruby-build \
   redis \
   rg \
+  shared-mime-info \
   terraform \
   tmux \
   tmuxp \
