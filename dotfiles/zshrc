@@ -119,7 +119,7 @@ export SKIP_SIMPLECOV=1
 
 # Fix node on Apple Silicon processors
 # https://stackoverflow.com/questions/69692842/error-message-error0308010cdigital-envelope-routinesunsupported
-export NODE_OPTIONS=--openssl-legacy-provider
+# export NODE_OPTIONS=--openssl-legacy-provider
 
 # Node Version Manager
 export NVM_DIR="$HOME/.nvm"

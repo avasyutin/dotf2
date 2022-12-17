@@ -22,6 +22,7 @@ $ brew install \
   bash \
   cowsay \
   curl \
+  dive \
   fortune \
   fzf \
   git \
