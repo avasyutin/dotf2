@@ -36,7 +36,7 @@ function is_wsl() {
 
 # Show prompt like […/speed2/speed_to]$
 # https://unix.stackexchange.com/questions/273529/shorten-path-in-zsh-prompt
-export PS1="%{$fg[cyan]%}[%(3~|…/%2~|%4~)]%(?.%{$fg[green]%}.%{$fg[red]%})%B$%b "
+export PS1="%{$fg[cyan]%}[ 📡 %(3~|…/%2~|%4~)]%(?.%{$fg[green]%}.%{$fg[red]%})%B$%b "
 
 export PATH="$HOME/bin:$PATH"
 export PATH="./bin:$PATH"
@@ -86,9 +86,8 @@ fi
 # Make ZSH completion output the same color as 'ls' output color
 # https://superuser.com/questions/290500/zsh-completion-colors-and-os-x
 # https://geoff.greer.fm/lscolors/
-export LS_COLORS="di=34:ln=36:so=1;31:pi=1;33:ex=32:bd=1;34;46:cd=1;34;43:su=0;41:sg=0;46:tw=0;42:ow=0;43"
-zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-
+# export LS_COLORS="di=34:ln=36:so=1;31:pi=1;33:ex=32:bd=1;34;46:cd=1;34;43:su=0;41:sg=0;46:tw=0;42:ow=0;43"
+# zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 # FZF for searching in the shell history
@@ -96,7 +95,8 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 if is_mac; then
   [ -s "$(brew --prefix fzf)/shell/key-bindings.zsh" ] && \. "$(brew --prefix fzf)/shell/key-bindings.zsh"
 else
-  [ -s "/usr/share/fzf/shell/key-bindings.zsh" ] && \. /usr/share/fzf/shell/key-bindings.zsh
+  # [ -s "/usr/share/fzf/shell/key-bindings.zsh" ] && \. /usr/share/fzf/shell/key-bindings.zsh
+  [ -s "/usr/share/doc/fzf/examples/key-bindings.zsh" ] && \. /usr/share/doc/fzf/examples/key-bindings.zsh
 fi
 
 export FZF_DEFAULT_COMMAND='rg --files'
@@ -106,7 +106,7 @@ export FZF_DEFAULT_COMMAND='rg --files'
 #
 function rbenv_prompt_info() {
   if [ -e "./.ruby-version" ]; then
-    echo "[$(cat .ruby-version)]"
+    echo "[%{$fg[red]%}$(cat .ruby-version)%{$fg[default]%}]"
   fi
 }
 
