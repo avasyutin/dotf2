@@ -106,7 +106,7 @@ export FZF_DEFAULT_COMMAND='rg --files'
 #
 function rbenv_prompt_info() {
   if [ -e "./.ruby-version" ]; then
-    echo "[$(cat .ruby-version)]"
+    echo "[%{$fg[red]%}$(cat .ruby-version)%{$fg[default]%}]"
   fi
 }
 
