@@ -71,5 +71,7 @@ set nowrap
 
 " Mouse
 " ttymouse important to use inside tmux
-set ttymouse=xterm2
-set mouse=a
+if !has('nvim')
+  set ttymouse=xterm2
+  set mouse=a
+endif

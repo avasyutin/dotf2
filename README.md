@@ -43,5 +43,8 @@ $ brew install \
   tmuxp \
   vim \
   wget \
-  zsh
+  zsh \
+  pwgen \
+  jpegoptim \
+  nvim
 ```
