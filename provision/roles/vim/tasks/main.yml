@@ -14,3 +14,5 @@
     dest: '{{ dotfiles_dir }}/nvim/pack/minpac/opt/minpac'
     clone: yes
     update: yes
+- name: symlink ideavim
+  file: src={{ dotfiles_dir }}/ideavimrc dest=~/.ideavimrc state=link force=yes

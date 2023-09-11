@@ -132,6 +132,11 @@ else
   [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
 fi
 
+if is_mac; then
+  export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/lib:/opt/homebrew/lib/
+  export CPATH=$CPATH:/usr/local/include:/opt/homebrew/include/
+fi
+
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 # Go environment
 #
