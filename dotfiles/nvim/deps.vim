@@ -34,6 +34,7 @@ call minpac#add('scrooloose/nerdtree')
 call minpac#add('scrooloose/nerdcommenter')
 " call minpac#add('elixir-editors/vim-elixir')
 call minpac#add('hashivim/vim-terraform')
+call minpac#add('fatih/vim-go')
 
 " Autocompletion
 call minpac#add('ervandew/supertab')
