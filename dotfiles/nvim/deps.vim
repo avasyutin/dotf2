@@ -19,6 +19,9 @@ call minpac#add('godlygeek/tabular')
 " UI
 call minpac#add('chriskempson/base16-vim')
 call minpac#add('tomasr/molokai')
+call minpac#add('vague2k/vague.nvim')
+call minpac#add('EdenEast/nightfox.nvim')
+
 " call minpac#add('edkolev/tmuxline.vim')
 " call minpac#add('itchyny/lightline.vim')
 

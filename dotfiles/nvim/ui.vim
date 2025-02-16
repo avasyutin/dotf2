@@ -19,10 +19,11 @@ if has('gui_running')
   set guioptions-=L "remove left-hand scroll bar
 
   set background=dark
-  color base16-monokai
+  " color base16-monokai
+  color nightfox
 
   if IsMac()
-    set guifont=Fira\ Code\ Light:h12
+    set guifont=Fira\ Code\ Light:h13
     set linespace=2
   else
     set guifont=Fira\ Code\ Retina\ 9
@@ -31,7 +32,8 @@ else
   " Only for HighColor schemes.
   set termguicolors
   " color base16-monokai
-  color molokai
+  " color molokai
+  color nightfox
 
   " Nice red color for misspelled words
   let &t_Cs = "\e[4:3m"
