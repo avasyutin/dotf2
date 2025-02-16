@@ -32,8 +32,12 @@ else
   " Only for HighColor schemes.
   set termguicolors
   " color base16-monokai
-  " color molokai
-  color nightfox
+
+  if has('nvim')
+    color nightfox
+  else
+    color molokai
+  endif
 
   " Nice red color for misspelled words
   let &t_Cs = "\e[4:3m"

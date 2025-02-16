@@ -1,18 +1,2 @@
-- name: create directory for backups and swaps
-  file: path=~/.vimtmp state=directory force=yes
-- name: symlink vim config
-  file: src={{ dotfiles_dir }}/nvim/init.vim dest=~/.vimrc state=link force=yes
-- name: remove old vim directory
-  file: path=~/.vim state=absent force=yes
-- name: symlink vim directory
-  file: src={{ dotfiles_dir }}/nvim dest=~/.vim state=link force=yes
-- name: create dir for minpack
-  file: path={{ dotfiles_dir }}/nvim/pack/minpac/opt state=directory
-- name: clone minpack
-  git:
-    repo: git@github.com:k-takata/minpac.git
-    dest: '{{ dotfiles_dir }}/nvim/pack/minpac/opt/minpac'
-    clone: yes
-    update: yes
-- name: symlink ideavim
-  file: src={{ dotfiles_dir }}/ideavimrc dest=~/.ideavimrc state=link force=yes
+- include_tasks: vim.yml
+- include_tasks: nvim.yml

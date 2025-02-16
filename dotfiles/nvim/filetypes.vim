@@ -16,6 +16,7 @@ autocmd Filetype go               setlocal ts=4 sw=4 foldmethod=syntax colorcolu
 autocmd Filetype html             setlocal ts=2 sw=2 expandtab foldmethod=syntax
 autocmd Filetype java             setlocal ts=2 sw=2 expandtab colorcolumn=110
 autocmd Filetype javascript       setlocal ts=2 sw=2 expandtab foldmethod=syntax colorcolumn=110
+autocmd Filetype lua              setlocal ts=2 sw=2 expandtab foldmethod=syntax colorcolumn=110
 autocmd Filetype json             setlocal ts=2 sw=2 expandtab foldmethod=syntax
 autocmd Filetype make             setlocal ts=4 sw=4
 autocmd Filetype markdown         setlocal ts=2 sw=2 spell
