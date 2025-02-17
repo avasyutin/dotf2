@@ -203,3 +203,8 @@ export PATH="$PATH:/usr/local/sessionmanagerplugin/bin"
 
 # TODO:
 export HOMEBREW_NO_AUTO_UPDATE=true
+
+
+if [ -f ~/.zshrc.secrets ]; then
+  source ~/.zshrc.secrets
+fi

@@ -12,6 +12,8 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Load plugins
 require("lazy").setup("plugins")
+require("config.cmp")
+require("config.snippets")
 
 vim.cmd("source ~/.config/nvim/functions.vim")
 vim.cmd("source ~/.config/nvim/commands.vim")

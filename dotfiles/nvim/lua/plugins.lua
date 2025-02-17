@@ -34,14 +34,26 @@ return {
   { "fatih/vim-go" },
 
   -- Autocompletion
-  { "ervandew/supertab" },
+  {
+    "hrsh7th/nvim-cmp",
+    dependencies = {
+      "hrsh7th/cmp-nvim-lsp",       -- LSP completion
+      "hrsh7th/cmp-buffer",         -- Buffer words completion
+      "hrsh7th/cmp-path",           -- File path completion
+      "saadparwaiz1/cmp_luasnip",   -- Snippet completion
+      "L3MON4D3/LuaSnip",           -- Snippet engine
+      "rafamadriz/friendly-snippets", -- Predefined snippets
+    },
+  },
 
   -- Snippets
-  { "garbas/vim-snipmate", dependencies = { "marcweber/vim-addon-mw-utils" } },
-  { "marcweber/vim-addon-mw-utils" },
+  { "L3MON4D3/LuaSnip", dependencies = { "rafamadriz/friendly-snippets" } },
 
   -- Searching
   { "mileszs/ack.vim" },
+
+  -- AI
+  require("plugins.avante"),
 
   -- Optional plugins (uncomment to enable)
   -- { "edkolev/tmuxline.vim" },
