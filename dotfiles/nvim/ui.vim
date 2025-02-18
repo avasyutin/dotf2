@@ -61,7 +61,8 @@ set number
 set nornu
 
 " Whitespaces look and feel
-set listchars=trail:␣,space:⋅,tab:⇨\ ,extends:>,precedes:<
+set listchars=trail:␣,space:⋅,tab:→\ ,extends:>,precedes:<
+set list
 
 " Search settings.
 set showmatch

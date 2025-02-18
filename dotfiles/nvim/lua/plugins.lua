@@ -31,18 +31,19 @@ return {
   -- Programming-related
   { "scrooloose/nerdcommenter" },
   { "hashivim/vim-terraform" },
-  { "fatih/vim-go" },
 
   -- Autocompletion
   {
     "hrsh7th/nvim-cmp",
     dependencies = {
-      "hrsh7th/cmp-nvim-lsp",       -- LSP completion
-      "hrsh7th/cmp-buffer",         -- Buffer words completion
-      "hrsh7th/cmp-path",           -- File path completion
-      "saadparwaiz1/cmp_luasnip",   -- Snippet completion
-      "L3MON4D3/LuaSnip",           -- Snippet engine
-      "rafamadriz/friendly-snippets", -- Predefined snippets
+      "hrsh7th/cmp-nvim-lsp",            -- LSP completion
+      "neovim/nvim-lspconfig",           -- LSP configurations
+      "hrsh7th/cmp-buffer",              -- Buffer words completion
+      "hrsh7th/cmp-path",                -- File path completion
+      "saadparwaiz1/cmp_luasnip",        -- Snippet completion
+      "L3MON4D3/LuaSnip",                -- Snippet engine
+      "rafamadriz/friendly-snippets",    -- Predefined snippets
+      "nvim-treesitter/nvim-treesitter", -- Better syntax parsing
     },
   },
 
@@ -58,5 +59,4 @@ return {
   -- Optional plugins (uncomment to enable)
   -- { "edkolev/tmuxline.vim" },
   -- { "itchyny/lightline.vim" },
-  -- { "elixir-editors/vim-elixir" },
 }

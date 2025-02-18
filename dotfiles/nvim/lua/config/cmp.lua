@@ -1,3 +1,4 @@
+local lspconfig = require("lspconfig")
 local luasnip = require("luasnip")
 local cmp = require("cmp")
 
@@ -44,3 +45,24 @@ cmp.setup({
     { name = "path" },       -- File path completion
   }),
 })
+
+-- Enable LSP for specific languages
+-- Go
+lspconfig.gopls.setup({
+  on_attach = function(client, bufnr)
+    -- Disable file watching notifications from Neovim's internal API
+    -- client.server_capabilities.workspace.didChangeWatchedFiles = false
+  end,
+  settings = {
+    gopls = {
+      directoryFilters = { "-node_modules", "-.git", "-vendor" },
+      analyses = { unusedparams = true, unusedwrite = true },
+      staticcheck = true,
+    },
+  },
+})
+
+-- lspconfig.gopls.setup({})
+-- lspconfig.rust_analyzer.setup({})  -- Rust
+-- lspconfig.pyright.setup({})  -- Python
+-- lspconfig.tsserver.setup({})  -- TypeScript
