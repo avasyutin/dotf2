@@ -33,6 +33,7 @@ function is_wsl() {
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 # Common environment configuration
 #
+export HOMEBREW_NO_AUTO_UPDATE=true
 
 function rbenv_prompt_info() {
   if [ -e "./.ruby-version" ]; then
@@ -201,10 +202,10 @@ export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 #
 export PATH="$PATH:/usr/local/sessionmanagerplugin/bin"
 
-# TODO:
-export HOMEBREW_NO_AUTO_UPDATE=true
 
-
+# = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+# Load secrets which must be gitignored
+#
 if [ -f ~/.zshrc.secrets ]; then
   source ~/.zshrc.secrets
 fi
