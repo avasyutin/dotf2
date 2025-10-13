@@ -1,59 +1,95 @@
-export ZSH=$HOME/.oh-my-zsh
+# Start timing
+_zsh_start_time=$(($(date +%s%N)/1000000))
 
-ZSH_THEME="gallois"
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+source "${ZINIT_HOME}/zinit.zsh"
 
-# https://github.com/agkozak/zsh-z
-plugins=(z bundler rails docker docker-compose git git-prompt rbenv)
-source $ZSH/oh-my-zsh.sh
+zi ice wait lucid
+zi light MichaelAquilina/zsh-you-should-use
+
+zi ice wait lucid atload"_zsh_autosuggest_start"
+zi light zsh-users/zsh-autosuggestions
+
+zi ice wait lucid blockf atpull'zi creinstall -q .'
+zi light zsh-users/zsh-completions
+
+zi ice wait lucid
+zi light Aloxaf/fzf-tab
+
+autoload -Uz compinit
+if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
+  compinit
+else
+  compinit -C
+fi
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#595959"
+bindkey '^j' autosuggest-accept
+
+# = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+# History
+#
+HISTSIZE=50000
+SAVEHIST=50000
+setopt EXTENDED_HISTORY          # Save timestamp
+setopt APPEND_HISTORY
+setopt INC_APPEND_HISTORY        # Add commands immediately
+setopt SHARE_HISTORY             # Share history between sessions
+setopt HIST_EXPIRE_DUPS_FIRST    # Remove duplicates first
+setopt HIST_IGNORE_DUPS          # Don't record duplicate in a row
+setopt HIST_FIND_NO_DUPS         # Don't show duplicates in search
+setopt HIST_REDUCE_BLANKS        # Remove extra blanks
+setopt HIST_IGNORE_SPACE         # Manual control with leading space
+
+zshaddhistory() {
+  # Don't save multiline commands (when each line end with ' \')
+  [[ $1 == *$' \\'* ]] && return 1
+  return 0
+}
+
+# = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+# Aliases
+#
+alias hrl='fc -RI' # history reload
+alias tmux='tmux -2'
+alias ta='tmux attach -t'
+alias tnew='tmux new -s'
+alias tls='tmux ls'
+alias tkill='tmux kill-session -t'
+alias ll='ls -lah'
+alias gco='git checkout'
+alias gb='git branch'
+alias gba='git branch -a'
+alias glp='git log --oneline --graph --decorate'
+alias gl='git log'
+alias gst='git status'
+alias be='bundle exec'
+alias bi='bundle install'
+alias bu='bundle update'
+alias bo='bundle open'
+alias rs='bundle exec rails s'
+alias rc='bundle exec rails c'
+alias rdm='bundle exec rails db:migrate'
+alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
 
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 # Useful functions
 #
-function is_mac() {
-  uname="$(uname -a)"
-  [[ "$uname" =~ Darwin ]] && return
-
-  false
-}
-
-function is_linux() {
-  uname="$(uname -a)"
-  [[ "$uname" =~ Linux ]] && return
-
-  false
-}
-
-function is_wsl() {
-  uname="$(uname -r)"
-  [[ "$uname" =~ microsoft ]] && return
-
-  false
-}
+is_mac()  { [[ $OSTYPE == darwin*  ]]; }
+is_linux(){ [[ $OSTYPE == linux*   ]]; }
+is_wsl()  { [[ -n ${WSL_DISTRO_NAME:-} || "$(uname -r)" == *microsoft* ]]; }
 
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 # Common environment configuration
 #
-export HOMEBREW_NO_AUTO_UPDATE=true
-
-function rbenv_prompt_info() {
-  if [ -e "./.ruby-version" ]; then
-    echo "[%{$fg[red]%}$(cat .ruby-version)%{$fg[default]%}]"
-  fi
-}
-
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[lightgray]%}[%{$fg[green]%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$fg[lightgray]%}]"
-ZSH_THEME_GIT_PROMPT_BRANCH="%{$fg[green]%}"
-
-# Show prompt like […/speed2/speed_to]$
-# https://unix.stackexchange.com/questions/273529/shorten-path-in-zsh-prompt
-export PS1="%{$fg[cyan]%}[%(3~|…/%2~|%4~)]%(?.%{$fg[green]%}.%{$fg[red]%})%B$%b "
-export RPROMPT='$(rbenv_prompt_info) $(git_super_status)%{$reset_color%}'
-
+typeset -U path 
 export PATH="$HOME/bin:$PATH"
 export PATH="./bin:$PATH"
-export PATH="./node_modules/.bin:$PATH"
 
+export ANSIBLE_NOCOWS=1
+export HOMEBREW_NO_AUTO_UPDATE=true
 export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 
@@ -64,44 +100,29 @@ if is_mac; then
   export LSCOLORS=exgxBxDxcxEgEdxbxgxcxd
 fi
 
-# Tmux
-alias tmux='tmux -2'
-alias ta='tmux attach -t'
-alias tnew='tmux new -s'
-alias tls='tmux ls'
-alias tkill='tmux kill-session -t'
-
 # Fix tmuxinator/tmuxp window titles.
 export DISABLE_AUTO_TITLE='true'
 
-# Use vimx if exists (because clipboard support)
-if [ -x "$(command -v vimx)" ]; then
+if [ -x "$(command -v hx)" ]; then
+  export EDITOR='hx'
+elif [ -x "$(command -v vimx)" ]; then
+  # Use vimx if exists (because clipboard support)
   alias vim='vimx'
   export EDITOR='vimx'
 else
   export EDITOR='vim'
 fi
 
-# Enable clipboard integration for WSL2
-if is_wsl; then
-  export DISPLAY=`grep -oP "(?<=nameserver ).+" /etc/resolv.conf`:0.0
-fi
+# = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+# Prompt configuration
+#
+export STARSHIP_CONFIG=~/dotf2/dotfiles/starship.toml
+eval "$(starship init zsh)"
 
-# Green cursor
-echo -ne '\e]12;green\a'
-
-# SublimeText 'subl .' command
-if is_mac; then
-  export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
-fi
-
-
-# Make ZSH completion output the same color as 'ls' output color
-# https://superuser.com/questions/290500/zsh-completion-colors-and-os-x
-# https://geoff.greer.fm/lscolors/
-export LS_COLORS="di=34:ln=36:so=1;31:pi=1;33:ex=32:bd=1;34;46:cd=1;34;43:su=0;41:sg=0;46:tw=0;42:ow=0;43"
-zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-
+# = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+# z is a smarter cd command
+#
+eval "$(zoxide init zsh)"
 
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 # FZF for searching in the shell history
@@ -117,37 +138,25 @@ export FZF_DEFAULT_COMMAND='rg --files'
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 # Ruby and Rails environment
 #
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+eval "$(/Users/alexv/.local/bin/mise activate zsh)"
 
 export BUNDLE_JOBS=4
 export DISABLE_SPRING=1
 export SKIP_SIMPLECOV=1
-
-# Fix node on Apple Silicon processors
-# https://stackoverflow.com/questions/69692842/error-message-error0308010cdigital-envelope-routinesunsupported
-# export NODE_OPTIONS=--openssl-legacy-provider
-
-# Node Version Manager
-export NVM_DIR="$HOME/.nvm"
-
-if is_mac; then
-  [ -s "$(brew --prefix nvm)/nvm.sh" ] && \. "$(brew --prefix nvm)/nvm.sh"
-  [ -s "$(brew --prefix nvm)/etc/bash_completion.d/nvm" ] && \. "$(brew --prefix nvm)/etc/bash_completion.d/nvm"
-else
-  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-  [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
-fi
 
 if is_mac; then
   export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/lib:/opt/homebrew/lib/
   export CPATH=$CPATH:/usr/local/include:/opt/homebrew/include/
 fi
 
+export PATH="./node_modules/.bin:$PATH"
+# Fix node on Apple Silicon processors
+# https://stackoverflow.com/questions/69692842/error-message-error0308010cdigital-envelope-routinesunsupported
+# export NODE_OPTIONS=--openssl-legacy-provider
+
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 # Go environment
 #
-
 if is_linux; then
   export PATH="$HOME/opt/go/bin:$PATH"
 fi
@@ -156,32 +165,14 @@ export GOPATH="$HOME/work/go"
 export PATH="$GOPATH/bin:$PATH"
 
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-# Devops tools
-#
-export ANSIBLE_NOCOWS=1
-
-# Terraform autocompletion configuration
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C terraform terraform
-
-# = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 # Postgres configuration
 #
 if is_mac; then
-  # For compilers to find postgresql@15 you may need to set:
-  #   export LDFLAGS="-L/opt/homebrew/opt/postgresql@15/lib"
-  #   export CPPFLAGS="-I/opt/homebrew/opt/postgresql@15/include"
-  #
   # To restart postgresql@15 after an upgrade:
   #   brew services restart postgresql@15
   # Or, if you don't want/need a background service you can just run:
   #   /opt/homebrew/opt/postgresql@15/bin/postgres -D /opt/homebrew/var/postgresql@15
   export PATH="$(brew --prefix postgresql@16)/bin:$PATH"
-fi
-
-if is_wsl; then
-  # Set default postgres host for WSL2
-  export PGHOST=127.0.0.1
 fi
 
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -202,6 +193,15 @@ export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 #
 export PATH="$PATH:/usr/local/sessionmanagerplugin/bin"
 
+# = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+# Rust and Cargo
+#
+# Installation instructions:
+# https://doc.rust-lang.org/cargo/getting-started/installation.html
+#
+if [ -f "$HOME/.cargo/env" ]; then
+  source "$HOME/.cargo/env"
+fi
 
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 # Load secrets which must be gitignored
@@ -209,3 +209,8 @@ export PATH="$PATH:/usr/local/sessionmanagerplugin/bin"
 if [ -f ~/.zshrc.secrets ]; then
   source ~/.zshrc.secrets
 fi
+
+# Calculate and show load time or run `time zsh -i -c exit`
+_zsh_end_time=$(($(date +%s%N)/1000000))
+_zsh_load_time=$(($_zsh_end_time - $_zsh_start_time))
+echo "zshrc loaded in ${_zsh_load_time}ms"

@@ -1,2 +1,0 @@
-- name: 'symlink .dosbox'
-  file: src={{dotfiles_dir}}/dosbox dest=~/.dosbox state=link

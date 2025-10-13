@@ -1,7 +1,0 @@
-- hosts: localhost
-  roles:
-    - zsh
-    - { role: git, tags: git }
-    - { role: devtools, tags: devtools }
-    - { role: vim, tags: vim }
-    - { role: tmux, tags: tmux }

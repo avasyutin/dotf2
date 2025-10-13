@@ -1,0 +1,19 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+
+[directory]
+truncation_length = 2
+truncation_symbol = "../"
+home_symbol = "~"
+truncate_to_repo = true
+read_only = "🔒"
+
+[aws]
+disabled = true
+
+[custom.dockerctx]
+command = "docker context show 2>/dev/null | grep -v '^default$'"
+when = "docker context show 2>/dev/null | grep -qv '^default$'"
+format = "via 🐳 [$output](bold cyan) "

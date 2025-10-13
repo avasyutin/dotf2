@@ -1,7 +1,0 @@
-{
-  "binding_pry": {
-    "prefix": "bp",
-    "body": "binding.pry",
-    "description": "Insert binding.pry to create a breakpoint"
-  }
-}

@@ -1,8 +1,0 @@
-- name: symlink gemrc
-  file: src={{dotfiles_dir}}/gemrc dest=~/.gemrc state=link force=yes
-
-- name: $GOPATH
-  file: path=~/work/go/bin state=directory force=yes
-
-- name: NVM directory
-  file: path=~/.nvm state=directory force=yes

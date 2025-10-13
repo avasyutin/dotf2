@@ -1,0 +1,11 @@
+.git/
+.idea/
+tmp/
+node_modules/
+vendor/bundle/
+public/*packs*/
+public/build/
+public/*vite*/
+.terraform/
+log/
+coverage/

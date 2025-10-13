@@ -46,8 +46,11 @@ python-*-docs-html
 playbook.retry
 dotfiles/emacs.d/saveplace
 dotfiles/emacs.d/smex-items
+dotfiles/view
+dotfiles/vim/view
 dotfiles/nvim/view
 dotfiles/nvim/pack
+dotfiles/vim/pack
 .ignore
 
 # Ignore vim user's wordlist

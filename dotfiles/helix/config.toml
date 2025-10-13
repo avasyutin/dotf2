@@ -1,0 +1,45 @@
+theme = "nightfox"
+
+[editor]
+rulers = [100]
+trim-trailing-whitespace = true
+end-of-line-diagnostics = "hint"
+completion-timeout = 100
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+git-ignore = false
+
+[editor.indent-guides]
+render = true
+character = "┊" # Some characters that work well: "▏", "┆", "┊", "⸽", "╎"
+skip-levels = 1
+
+[editor.lsp]
+display-inlay-hints = true
+display-messages = true
+
+[editor.inline-diagnostics]
+cursor-line = "error"
+
+[editor.whitespace.render]
+space   = "all"    # render all regular spaces
+tab     = "all"    # render all tabs
+nbsp    = "none"   # no non-breaking spaces
+nnbsp   = "none"   # no narrow non-breaking spaces
+newline = "none"   # no explicit newline markers
+
+[editor.whitespace.characters]
+# space   = "·"
+# tab     = "→"
+# newline = "⏎"
+
+[keys.normal]
+# # Print the current line's git blame information to the statusline.
+# space.B = ":echo %sh{git blame -L %{cursor_line},+1 %{buffer_name}}"
+space.B = ":run-shell-command ~/.config/helix/utils/blame_line_pretty.sh %{buffer_name} %{cursor_line}"

@@ -1,0 +1,45 @@
+[[language]]
+name = "ruby"
+# Which files and where to consider the root of the project
+roots = ["Gemfile", "*.gemspec"]
+file-types = ["rb", "rake", "ru", { glob = "Gemfile" }]
+language-servers = ["ruby-lsp", "scls"]
+indent = { tab-width = 2, unit = "  " }
+
+[language-server.ruby-lsp]
+command = "bundle"
+args = ["exec", "ruby-lsp"]
+
+[language-server.ruby-lsp.config]
+diagnostics = true
+formatting = true
+
+[language-server.ruby-lsp.config.indexing]
+excludedGems = [
+  "aasm",
+  "activerecord",
+  "activerecord-import",
+  "anycable-rails",
+  "puma",
+  "rails",
+  "pg"
+]
+
+[language-server.scls]
+command = "simple-completion-language-server"
+
+[language-server.scls.config]
+max_completion_items = 20     # set max completion results len for each group: words, snippets, unicode-input
+snippets_first = true         # completions will return before snippets by default
+feature_words = true          # enable completion by word
+feature_snippets = true       # enable snippets
+feature_unicode_input = true  # enable "unicode input"
+
+# write logs to /tmp/completion.log
+[language-server.scls.environment]
+RUST_LOG = "info,simple-completion-langauge-server=info"
+LOG_FILE = "/tmp/completion.log"
+
+[[language]]
+name = "git-commit"
+language-servers = ["scls"]

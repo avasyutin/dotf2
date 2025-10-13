@@ -1,50 +1,50 @@
 # Dotf2
 
-## VIM Plugins
+My personal dotfiles managed with Ansible.
 
-After vim was installed run it and execute:
+## Prerequisites
 
-1. :PackUpdate (and restart vim).
-
-## Pass variables to the playbook from command line
-
-``` shell
-$ ansible-playbook -i provision/inventory.ini provision/playbook.yml --extra-vars='user_name="John Doe" user_email=john.doe@gmail.com'
+```bash
+brew install ansible
 ```
 
-## Mac & Homebrew reminder
+## Configuration
 
+User information is configured in `provision/group_vars/all.yml`:
+- `user_name` - Your full name for git config
+- `user_email` - Your email for git config
+
+## Installation
+
+Full setup (installs homebrew packages and configures all tools):
+
+```bash
+make install
 ```
-$ brew install \
-  ag \
-  ansible \
-  awscli \
-  bash \
-  cowsay \
-  curl \
-  dive \
-  fortune \
-  fzf \
-  git \
-  git-secret \
-  go \
-  golangci-lint \
-  gpg \
-  htop \
-  imagemagick \
-  nvm \
-  postgresql@15 \
-  rbenv ruby-build \
-  redis \
-  rg \
-  shared-mime-info \
-  terraform \
-  tmux \
-  tmuxp \
-  vim \
-  wget \
-  zsh \
-  pwgen \
-  jpegoptim \
-  nvim
+
+Update specific tools only:
+
+```bash
+make install tags=zsh,vim
+make install tags=brew      # Install/update homebrew packages only
+make install tags=git       # Configure git only
 ```
+
+Available tags: `brew`, `git`, `zsh`, `vim`, `tmux`, `helix`, `starship`, `devtools`
+
+## Post-Installation
+
+### Vim Plugins
+
+After vim is installed, open vim and run:
+
+```vim
+:PackUpdate
+```
+
+Then restart vim.
+
+### Secrets
+
+Create `~/.zshrc.secrets` for any environment variables that should not be committed to git.
+

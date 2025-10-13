@@ -1,0 +1,5 @@
+[[snippets]]
+prefix = "bp"
+scope = ["ruby"]  # language id https://code.visualstudio.com/docs/languages/identifiers#_known-language-identifiers
+body = 'binding.pry'
+description = "Add pry breakpoint"

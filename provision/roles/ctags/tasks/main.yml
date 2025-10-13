@@ -1,2 +1,0 @@
-- name: set global ctags config
-  file: src={{dotfiles_dir}}/ctags dest=~/.ctags state=link
