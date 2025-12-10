@@ -146,3 +146,7 @@
       file: src={{ dotfiles_dir }}/helix dest=~/.config/helix state=link force=yes
       tags: helix
 
+    # Ghostty configuration
+    - name: symlink ghostty config
+      file: src={{ dotfiles_dir }}/ghostty dest=~/.config/ghostty state=link force=yes
+      tags: ghostty
